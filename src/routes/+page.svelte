@@ -25,6 +25,7 @@
     import tiffanyLogo from "../images/Tiffany.png"
     import novidades2 from "../images/novidades2.png"
     import product1 from "../images/product1.png"
+    import logo from "../images/logo.png"
 </script>
 
 <main>
@@ -103,6 +104,28 @@
                 <a href="#" class="px-4 py-2 text-slate-700 bg-white rounded-full">#cilios</a>
                 <a href="#" class="px-4 py-2 text-slate-700 bg-white rounded-full">#sobrancelhas</a>
                 <a href="#" class="px-4 py-2 text-slate-700 bg-white rounded-full">#labios</a>
+            </div>
+        </div>
+
+        <div id="espaco" class="w-full bg-slate-50 py-4 flex flex-col gap-8 items-center">
+            <img src={logo} alt="Logo" class="max-w-40">
+            <div class="w-full flex flex-wrap items-center justify-center gap-4 text-sm text-slate-500">
+                <span class="flex flex-col items-center text-center justify-center gap-2 max-w-44">
+                    <img src={gucciLogo} alt="Logo">
+                    <p>Ambiente aconchegante e acolhedor</p>
+                </span>
+                <span class="flex flex-col items-center text-center justify-center gap-2 max-w-44">
+                    <img src={gucciLogo} alt="Logo">
+                    <p>Você merece o melhor todos os dias</p>
+                </span>
+                <span class="flex flex-col items-center text-center justify-center gap-2 max-w-44">
+                    <img src={gucciLogo} alt="Logo">
+                    <p>Espaços elegantes e sofisticados</p>
+                </span>
+                <span class="flex flex-col items-center text-center justify-center gap-2 max-w-44">
+                    <img src={gucciLogo} alt="Logo">
+                    <p>Meu momento nosso compromisso</p>
+                </span>
             </div>
         </div>
     </section>
