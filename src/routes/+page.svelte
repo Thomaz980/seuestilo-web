@@ -19,6 +19,10 @@
     // images
     import banner from "../images/banner.png";
     import corte1 from "../images/corte1.jpeg";
+    import img1 from "../images/img1.png";
+    import img2 from "../images/img2.png";
+    import img3 from "../images/img3.png";
+    import img4 from "../images/img4.png";
     import novidades from "../images/novidades.png"
     import cartierLogo from "../images/Catier.png"
     import gucciLogo from "../images/Gucci.png"
@@ -52,10 +56,10 @@
                 <button>Sobrancelhas</button>
             </nav>
             <div class="w-full flex flex-wrap items-center justify-center gap-4">
-                <ServicoCard image={corte1} text='Micropigmentação Labial'/>
-                <ServicoCard image={corte1} text='Limpeza de Pele'/>
-                <ServicoCard image={corte1} text='Micropigmentação de sobrancelha'/>
-                <ServicoCard image={corte1} text='Técnica Fio a Fio'/>
+                <ServicoCard image={img1} text='Micropigmentação Labial'/>
+                <ServicoCard image={img2} text='Limpeza de Pele'/>
+                <ServicoCard image={img3} text='Micropigmentação de sobrancelha'/>
+                <ServicoCard image={img4} text='Técnica Fio a Fio'/>
             </div>
             <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
         </div>
