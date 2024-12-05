@@ -77,7 +77,7 @@
             <h2 class="text-2xl tracking-widest">NOVIDADES</h2>
             <div class="w-full flex flex-col gap-2">
                 <img src={novidades} alt="Curso">
-                <img src={novidades2} alt="Video Image">
+                <img src={novidades2} alt="Video">
             </div>
         </div>
         

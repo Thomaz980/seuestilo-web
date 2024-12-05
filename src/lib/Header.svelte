@@ -29,36 +29,14 @@
         </nav>
         <IconSearch/>
 </header>
-<MenuHamburguer class="hamburguer-menu" bind:open />
+<MenuHamburguer bind:open />
 
 <style>
-    .hamburguer-menu {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 80%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        z-index: 999;
-        transition: 0.3s ease;
-    } 
-
-
     .hamburguer-icon {
         display: none;
         z-index: 1000;
         cursor: pointer;
         color: wheat;
-    }
-
-    .hamburguer-menu a {
-        color: white;
-        font-size: 24px;
-        margin: 1rem 0;
     }
 
     /* Esconde o menu normal em telas menores */
