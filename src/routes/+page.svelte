@@ -57,7 +57,7 @@
                 <ServicoCard image={corte1} text='Micropigmentação de sobrancelha'/>
                 <ServicoCard image={corte1} text='Técnica Fio a Fio'/>
             </div>
-            <a href="#" class="flex items-center">Explore mais <IconArrowRight/></a>
+            <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
         </div>
 
         <SeparatorLanding/>
@@ -91,7 +91,7 @@
                 <ProdutoLanding image={product1} title='Harris Tweed Three button Jacket' price='120'/>
                 <ProdutoLanding image={product1} title='Harris Tweed Three button Jacket' price='120'/>
             </div>
-            <a href="#" class="flex items-center">Explore mais <IconArrowRight/></a>
+            <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
         </div>
 
         <div id="tendencias" class="w-full bg-slate-100 py-4 flex flex-col gap-2 items-center">

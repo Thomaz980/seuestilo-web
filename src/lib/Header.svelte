@@ -23,9 +23,9 @@
         </div>    
         <img src={logo} alt="Logo">
         <nav>
-            <a href="#">Sobre</a>
-            <a href="#">Contato</a>
-            <a href="#">Blog</a>
+            <a href="/">Sobre</a>
+            <a href="/">Contato</a>
+            <a href="/">Blog</a>
         </nav>
         <IconSearch/>
 </header>

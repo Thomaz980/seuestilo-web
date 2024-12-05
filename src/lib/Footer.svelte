@@ -32,9 +32,9 @@
         <div class="w-20 border-b border-b-slate-500 border-solid"></div>
     </div>
     <nav class="flex justify-around text-lg px-4">
-        <a href="#">Sobre</a>
-        <a href="#">Contato</a>
-        <a href="#">Blog</a>
+        <a href="/">Sobre</a>
+        <a href="/">Contato</a>
+        <a href="/">Blog</a>
     </nav>
     <div class="flex flex-col items-center text-slate-500 text-sm">
         <span>Copyright© espaçopauladiniz</span>
