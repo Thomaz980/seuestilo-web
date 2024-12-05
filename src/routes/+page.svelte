@@ -19,10 +19,10 @@
     // images
     import banner from "../images/banner.png";
     import corte1 from "../images/corte1.jpeg";
-    import img1 from "../images/img1.png";
-    import img2 from "../images/img2.png";
-    import img3 from "../images/img3.png";
-    import img4 from "../images/img4.png";
+    import img1 from "../images/img01.png";
+    import img2 from "../images/img02.png";
+    import img3 from "../images/img03.png";
+    import img4 from "../images/img04.png";
     import novidades from "../images/novidades.png"
     import cartierLogo from "../images/Catier.png"
     import gucciLogo from "../images/Gucci.png"
