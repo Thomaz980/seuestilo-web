@@ -1,28 +1,24 @@
-<script>
+<script lang="js">
     import Header from "$lib/Header.svelte";
     import {
-    IconArrowAutofitContent,
         IconArrowRight,
-        IconBraces,
         IconBrandInstagramFilled,
-        IconBrandTwitter,
         IconBrandTwitterFilled,
         IconBrandYoutubeFilled,
         IconDiamond,
-        IconMedal,
-        IconRings,
     } from "@tabler/icons-svelte";
     import ServicoCard from "$lib/ServicoCard.svelte";
     import Footer from "$lib/Footer.svelte";
     import SeparatorLanding from "$lib/SeparatorLanding.svelte";
     import ProdutoLanding from "$lib/ProdutoLanding.svelte";
+    import { servicos } from "$lib/servicosData.js";
     // images
     import banner from "../images/banner.png";
-    import corte1 from "../images/corte1.jpeg";
-    import img1 from "../images/img01.png";
-    import img2 from "../images/img02.png";
-    import img3 from "../images/img03.png";
-    import img4 from "../images/img04.png";
+    import corte1 from "../images/pele1.png";
+    import img1 from "../images/microSobrancelhas.png";
+    import img2 from "../images/mlabial.png";
+    import img3 from "../images/pele1.png";
+    import img4 from "../images/mlabial.png";
     import novidades from "../images/novidades.png"
     import cartierLogo from "../images/Catier.png"
     import gucciLogo from "../images/Gucci.png"
@@ -30,6 +26,12 @@
     import novidades2 from "../images/novidades2.png"
     import product1 from "../images/product1.png"
     import logo from "../images/logo.png"
+
+    let selectedType = 'Tudo';
+
+    function filterServicos(type) {
+        selectedType = type;
+    }
 </script>
 
 <main>
@@ -49,17 +51,20 @@
 
         <div id="servicos" class="w-full pb-4 flex flex-col gap-6 items-center">
             <h2 class="text-2xl tracking-widest">SERVIÇOS</h2>
-            <nav class="w-4/5 flex justify-around text-lg text-slate-500">
-                <button class="text-slate-700 underline underline-offset-8">Tudo</button>
-                <button>Pele</button>
-                <button>Lábios</button>
-                <button>Sobrancelhas</button>
+            <nav class="w-full flex flex-wrap justify-center text-lg text-slate-500 gap-2 px-4">
+                <button class={selectedType === 'Tudo' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Tudo')}>Tudo</button>
+                <button class={selectedType === 'Pele' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Pele')}>Pele</button>
+                <button class={selectedType === 'Lábios' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Lábios')}>Lábios</button>
+                <button class={selectedType === 'Olhar' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Olhar')}>Olhar</button>
+                <button class={selectedType === 'Cabelos' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Cabelos')}>Cabelos</button>
+                <button class={selectedType === 'Unhas' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Unhas')}>Unhas</button>
             </nav>
             <div class="w-full flex flex-wrap items-center justify-center gap-4">
-                <ServicoCard image={img1} text='Micropigmentação Labial'/>
-                <ServicoCard image={img2} text='Limpeza de Pele'/>
-                <ServicoCard image={img3} text='Micropigmentação de sobrancelha'/>
-                <ServicoCard image={img4} text='Técnica Fio a Fio'/>
+                {#each servicos as servico (servico.text)}
+                    {#if selectedType === 'Tudo' || selectedType === servico.type}
+                        <ServicoCard {servico} />
+                    {/if}
+                {/each}
             </div>
             <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
         </div>
