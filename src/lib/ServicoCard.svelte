@@ -1,4 +1,5 @@
 <script>
+    import time from "../images/icons/time.svg";
     export let servico = {};
 
     let showPopup = false;
@@ -24,15 +25,27 @@
 </div>
 
 {#if showPopup}
-    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+    <div class="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden">
+        <img 
+            class="w-full object-cover" 
+            style="height: 180px;" 
+            src={servico.image} 
+            alt="Imagem de Serviço" 
+        />
+        <div class="p-6">
             <h2 class="text-xl font-bold mb-4">{servico.text}</h2>
-            <p class="mb-2"><strong>Descrição:</strong> {servico.descricao}</p>
+            <p class="mb-2">
+                <!-- <img src={time} 
+                class="inline-block mr-2"
+                alt="Ícone de tempo"/> -->
+                {servico.descricao}</p>
             <p class="mb-2"><strong>Tempo:</strong> {servico.tempo}</p>
             <p class="mb-4"><strong>Valor:</strong> {servico.valor}</p>
             <button class="px-4 py-2 bg-blue-500 text-white rounded" on:click={closePopup}>Fechar</button>
         </div>
     </div>
+</div>
 {/if}
 
 <style scoped>
