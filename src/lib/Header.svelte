@@ -9,7 +9,7 @@
 
 <header class="w-full px-4 lg:px-6 h-24 text-lg flex items-center justify-between bg-slate-50 border border-gray-50 rounded-2xl">       
         <div class="hamburguer-icon">
-            <Hamburger
+            <!-- <Hamburger
                     class="hamburguer-icon"
                     title="Toggle nav links"
                     ariaControls="nav"
@@ -19,14 +19,14 @@
                     --border-radius="10px"
                     --color="black"
                     bind:open
-            />
+            /> -->
         </div>    
         <img src={logo} alt="Logo">
-        <nav>
+        <!-- <nav>
             <a href="/">Sobre</a>
             <a href="/">Contato</a>
             <a href="/">Blog</a>
-        </nav>
+        </nav> -->
         <IconSearch/>
 </header>
 <MenuHamburguer bind:open />
