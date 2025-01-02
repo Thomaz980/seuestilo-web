@@ -60,7 +60,7 @@
                 <button class={selectedType === 'Unhas' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Unhas')}>Unhas</button>
             </nav>
             <div class="w-full flex flex-wrap items-center justify-center gap-4">
-                {#each servicos as servico (servico.text)}
+                {#each servicos.filter((servico, index) => selectedType !== 'Tudo' || index < 6) as servico (servico.text)}
                     {#if selectedType === 'Tudo' || selectedType === servico.type}
                         <ServicoCard {servico} />
                     {/if}
