@@ -1,13 +1,13 @@
 <script>
     import { Hamburger } from "svelte-hamburgers";
     import MenuHamburguer from "./MenuHamburguer.svelte";
-    import logo from "../images/logo.png"
+    import logo from "$public/images/logo.png"
     import { IconSearch } from "@tabler/icons-svelte";
 
     let open = $state(false);
 </script>
 
-<header class="w-full px-4 lg:px-6 h-24 text-lg flex items-center justify-between bg-slate-50 border border-gray-50 rounded-2xl">       
+<header class="w-full px-4 lg:px-6 h-24 text-lg flex items-center justify-center bg-slate-50 border border-gray-50 rounded-2xl">       
         <div class="hamburguer-icon">
             <!-- <Hamburger
                     class="hamburguer-icon"
@@ -27,13 +27,14 @@
             <a href="/">Contato</a>
             <a href="/">Blog</a>
         </nav> -->
-        <IconSearch/>
+        <!-- <IconSearch/> -->
 </header>
 <MenuHamburguer bind:open />
 
 <style>
     .hamburguer-icon {
         display: none;
+        
         z-index: 1000;
         cursor: pointer;
         color: wheat;
@@ -41,10 +42,6 @@
 
     /* Esconde o menu normal em telas menores */
     @media (max-width: 1000px) {
-        nav {
-            display: none;
-        }
-
         .hamburguer-icon {
             display: block;
         }

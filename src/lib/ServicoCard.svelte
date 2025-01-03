@@ -1,5 +1,5 @@
 <script>
-    import time from "../images/icons/time.svg";
+    import time from "$public/icons/time.svg";
     export let servico = {};
 
     let showPopup = false;

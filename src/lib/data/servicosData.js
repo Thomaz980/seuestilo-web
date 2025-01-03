@@ -1,23 +1,22 @@
-import microlabial from "../images/mlabial.png";
-import limpezadepele from "../images/pele1.png";
-import microdesobrancelhas from "../images/microSobrancelhas.png";
-import padrao from "../images/banner.png";
-import extensaodecilios from "../images/extensaodecilios.png";
-import ventosa from "../images/ventosa.png";
-import remocaotatuagem from "../images/remocaotatuagem.png";
-import progressivas from "../images/progressiva.png";
-import pelerelaxante from "../images/pelerelaxante.png";
-import hidratacao from "../images/hidratacao.png";
-import cortes from "../images/cortes.jpeg";
-import coloracao from "../images/coloracao.png";
-import escova from "../images/escova.png";
-import unhasemgel from "../images/unhasemgel.png";
-import botox from "../images/botox.png";
-import manicure from "../images/manicure.png";
-import drenagemlinfatica from "../images/drenagemlinfatica.png";
-import ds from "../images/designedesobrancelhas.png";
 
-
+import microlabial from "$img/mlabial.png";
+import limpezadepele from "$img/pele1.png";
+import microdesobrancelhas from "$img/microSobrancelhas.png";
+import padrao from "$img/banner.png";
+import extensaodecilios from "$img/extensaodecilios.png";
+import ventosa from "$img/ventosa.png";
+import remocaotatuagem from "$img/remocaotatuagem.png";
+import progressivas from "$img/progressiva.png";
+import pelerelaxante from "$img/pelerelaxante.png";
+import hidratacao from "$img/hidratacao.png";
+import cortes from "$img/cortes.jpeg";
+import coloracao from "$img/coloracao.png";
+import escova from "$img/escova.png";
+import unhasemgel from "$img/unhasemgel.png";
+import botox from "$img/botox.png";
+import manicure from "$img/manicure.png";
+import drenagemlinfatica from "$img/drenagemlinfatica.png";
+import ds from "$img/designedesobrancelhas.png";
 
 export const servicos = [
   {

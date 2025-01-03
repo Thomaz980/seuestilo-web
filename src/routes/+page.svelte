@@ -11,21 +11,21 @@
     import Footer from "$lib/Footer.svelte";
     import SeparatorLanding from "$lib/SeparatorLanding.svelte";
     import ProdutoLanding from "$lib/ProdutoLanding.svelte";
-    import { servicos } from "$lib/servicosData.js";
+    import { servicos } from "$lib/data/servicosData.js";
     // images
-    import banner from "../images/banner.png";
-    import corte1 from "../images/pele1.png";
-    import img1 from "../images/microSobrancelhas.png";
-    import img2 from "../images/mlabial.png";
-    import img3 from "../images/pele1.png";
-    import img4 from "../images/mlabial.png";
-    import novidades from "../images/novidades.png"
-    import cartierLogo from "../images/Catier.png"
-    import gucciLogo from "../images/Gucci.png"
-    import tiffanyLogo from "../images/Tiffany.png"
-    import novidades2 from "../images/novidades2.png"
-    import product1 from "../images/product1.png"
-    import logo from "../images/logo.png"
+    import banner from "$img/banner.png";
+    import corte1 from "$img/pele1.png";
+    import img1 from "$img/microSobrancelhas.png";
+    import img2 from "$img/mlabial.png";
+    import img3 from "$img/pele1.png";
+    import img4 from "$img/mlabial.png";
+    import novidades from "$img/novidades.png";
+    import cartierLogo from "$img/Catier.png";
+    import gucciLogo from "$img/Gucci.png";
+    import tiffanyLogo from "$img/Tiffany.png";
+    import novidades2 from "$img/novidades2.png";
+    import product1 from "$img/product1.png";
+    import logo from "$img/logo.png";
 
     let selectedType = 'Tudo';
 
