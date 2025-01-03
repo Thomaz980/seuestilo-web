@@ -1,7 +1,7 @@
 <script>
     import { Hamburger } from "svelte-hamburgers";
     import MenuHamburguer from "./MenuHamburguer.svelte";
-    import logo from "$public/images/logo.png"
+    import logo from "$img/logo.png"
     import { IconSearch } from "@tabler/icons-svelte";
 
     let open = $state(false);

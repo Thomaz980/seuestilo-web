@@ -1,26 +1,25 @@
-export const cursos = [
+
+const cursos = [
   {
-    image: "./public/images/cortes.jpeg",
     title: "Curso de Maquiagem",
     description: "Aprenda técnicas de maquiagem profissional.",
-    price: "150",
+    price: "---",
   },
   {
-    image: "./public/images/cortes.jpeg",
     title: "Curso de Cabelos",
     description: "Domine cortes e penteados modernos.",
-    price: "200",
+    price: "---",
   },
   {
-    image: "./public/images/cortes.jpeg",
     title: "Curso de Unhas",
     description: "Torne-se um especialista em manicure e pedicure.",
-    price: "100",
+    price: "---",
   },
   {
-    image: "./public/images/cortes.jpeg",
     title: "Curso de Estética",
     description: "Conheça os melhores tratamentos de pele.",
-    price: "250",
+    price: "---",
   },
 ];
+
+export default cursos;

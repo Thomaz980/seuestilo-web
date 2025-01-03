@@ -2,7 +2,7 @@
     import { IconBrandInstagramFilled, IconBrandTwitterFilled, IconBrandYoutubeFilled, IconDiamond, IconRings } from "@tabler/icons-svelte";
 </script>
 
-<div class="w-full px-4 pt-8 pb-2 gap-6 flex flex-col bg-rose-200">
+<footer class="w-full px-4 pt-8 pb-2 gap-6 flex flex-col bg-rose-200">
     <div class="w-full px-8 flex justify-around">
         <IconBrandTwitterFilled size="32" color="#334155" />
         <IconBrandInstagramFilled size="32" color="#334155" />
@@ -40,4 +40,4 @@
         <span>Copyright© espaçopauladiniz</span>
         <span>Todos os Direitos Reservados.</span>
     </div>
-</div>
+</footer>
