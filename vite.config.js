@@ -14,6 +14,13 @@ export default defineConfig({
 	server: {
 		fs: {
 			allow: ['public']
+		},
+		watch: {
+			usePolling: true,
+			interval: 100
 		}
+	},
+	optimizeDeps: {
+		include: ['svelte', '@sveltejs/kit']
 	}
 });
