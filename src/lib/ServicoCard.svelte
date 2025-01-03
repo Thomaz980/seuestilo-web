@@ -1,5 +1,6 @@
 <script>
     import time from "$public/icons/time.svg";
+    import { fade } from 'svelte/transition';
     export let servico = {};
 
     let showPopup = false;
@@ -25,7 +26,7 @@
 </div>
 
 {#if showPopup}
-<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden">
         <img 
             class="w-full object-cover" 

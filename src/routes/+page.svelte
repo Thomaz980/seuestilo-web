@@ -12,6 +12,7 @@
     import SeparatorLanding from "$lib/SeparatorLanding.svelte";
     import ProdutoLanding from "$lib/ProdutoLanding.svelte";
     import { servicos } from "$lib/data/servicosData.js";
+    import { fade } from 'svelte/transition';
     // images
     import banner from "$img/banner.png";
     import corte1 from "$img/pele1.png";
@@ -32,6 +33,13 @@
     function filterServicos(type) {
         selectedType = type;
     }
+
+    function scrollToSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
 </script>
 
 <main>
@@ -42,9 +50,10 @@
     <section id="main_content" class="flex flex-col items-center bg-slate-50">
         <div id="banner" class="w-full flex flex-col items-center">
             <img src={banner} alt="Banner" class="w-full" />
+
             <a
-                href="/"
-                class="relative bottom-16 px-6 py-2 rounded-full text-white text-lg bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-0"
+                href="#servicos"
+                class="relative bottom-16 px-6 py-2 rounded-full text-white text-lg bg-gray-700 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-0" on:click={(event) => { event.preventDefault(); scrollToSection('servicos'); }}
                 >EXPLORAR COLEÇÃO</a
             >
         </div>
@@ -62,11 +71,13 @@
             <div class="w-full flex flex-wrap items-center justify-center gap-4">
                 {#each servicos.filter((servico, index) => selectedType !== 'Tudo' || index < 6) as servico (servico.text)}
                     {#if selectedType === 'Tudo' || selectedType === servico.type}
-                        <ServicoCard {servico} />
+                        <div in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
+                            <ServicoCard {servico} />
+                        </div>
                     {/if}
                 {/each}
             </div>
-            <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
+            <a href="#produtos" class="flex items-center" on:click={(event) => { event.preventDefault(); scrollToSection('produtos'); }}>Explore mais <IconArrowRight/></a>
         </div>
 
         <SeparatorLanding/>
