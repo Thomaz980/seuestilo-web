@@ -11,7 +11,9 @@
     import Footer from "$lib/Footer.svelte";
     import SeparatorLanding from "$lib/SeparatorLanding.svelte";
     import ProdutoLanding from "$lib/ProdutoLanding.svelte";
+    import CursoLanding from "$lib/CursoLanding.svelte";
     import { servicos } from "$lib/data/servicosData.js";
+    import { cursos } from "$lib/data/cursosData.js";
     import { fade } from 'svelte/transition';
     // images
     import banner from "$img/banner.png";
@@ -111,7 +113,17 @@
                 <ProdutoLanding image={product1} title='Harris Tweed Three button Jacket' price='120'/>
                 <ProdutoLanding image={product1} title='Harris Tweed Three button Jacket' price='120'/>
             </div>
-            <a href="/" class="flex items-center">Explore mais <IconArrowRight/></a>
+            <a href="/" class="flex items-center" on:click={(event) => { event.preventDefault(); scrollToSection('produtos'); }}>Explore mais <IconArrowRight/></a>
+        </div>
+
+        <div id="cursos" class="w-full pb-4 flex flex-col gap-6 items-center">
+            <h2 class="text-2xl tracking-widest">CURSOS</h2>
+            <div class="w-full flex overflow-x-auto items-center justify-center gap-4 pl-[35%] py-4">
+                {#each cursos as curso}
+                    <CursoLanding {curso} />
+                {/each}
+            </div>
+            <a href="#servicos" class="flex items-center" on:click={(event) => { event.preventDefault(); scrollToSection('servicos'); }}>Explore mais <IconArrowRight/></a>
         </div>
 
         <div id="tendencias" class="w-full bg-slate-100 py-4 flex flex-col gap-2 items-center">
