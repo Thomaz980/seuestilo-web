@@ -14,6 +14,14 @@ npx sv create
 npx sv create my-app
 ```
 
+## Configuração do Node.js
+
+Este projeto requer o Node.js versão 18. Para garantir que você está usando a versão correta, siga as instruções abaixo:
+
+1. Instale o [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager).
+2. Execute `nvm install` para instalar a versão correta do Node.js.
+3. Execute `nvm use` para usar a versão correta do Node.js.
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
