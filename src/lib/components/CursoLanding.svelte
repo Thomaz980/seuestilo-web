@@ -1,25 +1,31 @@
 <script>
     export let curso;
     import capa from '$img/cortes.jpeg';
+    import { IconClock, IconClockFilled, IconUsers } from '@tabler/icons-svelte';
     
 </script>
 
-<div class="curso-card flex flex-col items-center bg-white shadow-md rounded-lg p-4">
-    <img src={capa} alt={curso.title} class="w-full h-40 object-cover rounded-t-lg" />
-    <div class="flex flex-col items-center mt-4">
-        <h3 class="text-lg font-semibold curso-title">{curso.title}</h3>
-        <p class="text-gray-600 curso-description">{curso.description}</p>
-        <span class="text-xl font-bold mt-2">R${curso.price}</span>
+<div class="min-w-96 max-w-96 h-[32rem] flex flex-col items-center justify-end bg-white shadow-md rounded-lg relative overflow-hidden">
+    <!-- Background image -->
+    <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('{curso.image}')"></div>
+    
+    <!-- Content overlay -->
+    <div class="relative z-10 flex flex-col mt-4 gap-4 p-4 text-white" style="background-color: hsla(0, 0%, 0%, 0.6)">
+        <h2 class="text-lg font-semibold tracking-wider uppercase">{curso.title}</h2>
+        <p class="text-gray-200 text-sm">{curso.description}</p>
+        <div class="flex justify-between">
+            <div class="flex gap-2">
+                <span class="py-1 px-4 rounded-lg bg-white flex flex-col items-center text-zinc-800 text-sm"> <span class="flex items-center"><IconClockFilled color=#FFB18F/> {curso.duration}</span> Duração </span>
+                <span class="py-1 px-4 rounded-lg bg-white flex flex-col items-center text-zinc-800 text-sm"> <span class="flex items-center"><IconUsers color=#FFB18F/> {curso.vacancies}</span> Vagas </span>
+            </div>
+            <span class="py-1 px-1 rounded-lg bg-[#FFB18F] flex flex-col justify-center text-center text-white text-sm"> <span class="flex items-center"> Em breve... </span>
+        </div>
     </div>
+
 </div>
 
+
 <style>
-    .curso-card {
-        width: 300px; /* Define a largura fixa para os cards */
-        height: 350px; /* Define a altura fixa para os cards */
-        display: flex;
-        flex-direction: column;
-    }
     .curso-title {
         white-space: nowrap;
         overflow: hidden;
