@@ -16,10 +16,10 @@
         <div class="w-20 border-b border-b-slate-500 border-solid"></div>
     </div>
     <div class="flex flex-col text-center">
-        <a class="text-slate-700 text-lg" href="tel:81992881187">
+        <a class="text-slate-700 text-lg" href="http://api.whatsapp.com/send?1=pt_BR&phone=5581992881187">
            Joseph: (81) 99288-1187</a
         >
-        <a class="text-slate-700 text-lg" href="tel:81993880905">
+        <a class="text-slate-700 text-lg" href="https://wa.me/5581993880905">
             Reyson: (81) 99388-0905</a
         >
         <span class="text-slate-700 text-lg">
