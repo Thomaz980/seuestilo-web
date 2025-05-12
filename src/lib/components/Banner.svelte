@@ -1,7 +1,7 @@
 
 <script>
 
-    import banner from '$img/banner.png';
+    import banner from '$img/img/camisa1.jpg';
     import { scrollToSection } from '$src/utils/scrollToSection.js';
    
 </script>

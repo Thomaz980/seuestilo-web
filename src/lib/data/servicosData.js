@@ -1,158 +1,145 @@
 
-import microlabial from "$img/mlabial.png";
-import limpezadepele from "$img/pele1.png";
-import microdesobrancelhas from "$img/microSobrancelhas.png";
-import padrao from "$img/banner.png";
-import extensaodecilios from "$img/extensaodecilios.png";
-import ventosa from "$img/ventosa.png";
-import remocaotatuagem from "$img/remocaotatuagem.png";
-import progressivas from "$img/progressiva.png";
-import pelerelaxante from "$img/pelerelaxante.png";
-import hidratacao from "$img/hidratacao.png";
-import cortes from "$img/cortes.jpeg";
-import coloracao from "$img/coloracao.png";
-import escova from "$img/escova.png";
-import unhasemgel from "$img/unhasemgel.png";
-import botox from "$img/botox.png";
-import manicure from "$img/manicure.png";
-import drenagemlinfatica from "$img/drenagemlinfatica.png";
-import ds from "$img/designedesobrancelhas.png";
+import alfaiateria from "$img/bermudas/photo-output 2.jpg";
+import BermudasLinho from "$img/bermudas/FullSizeRender.jpg";
+import MauricinhoSarja1 from "$img/bermudas/mSarga1.jpg";
+import MauricinhoSarja2 from "$img/bermudas/mSarga2.jpeg";
+import SComfort from "$img/calcados/comfort.jpg";
+import SCouro from "$img/calcados/couro.jpg";
+import SMule from "$img/calcados/mule.jpg";
+import SMule2 from "$img/calcados/mule2.jpg";
+import CJens from "$img/calcas/jeansAzul.png";
+import CJens2 from "$img/calcas/jeansEscuro.png";
+import CTexturizada1 from "$img/camisas/texturizadas1.jpg";
+import CPolo1 from "$img/camisas/polo1.jpg";
+import Cuecas from "$img/cuecas/cuecas1.jpg";
+import Cuecas2 from "$img/cuecas/boss.jpg";
+
 
 export const servicos = [
   {
-    image: microdesobrancelhas,
-    text: "Micropigmentação de sobrancelhas",
-    type: "Olhar",
-    descricao: "Realce a beleza das suas sobrancelhas.",
+    id: 1,
+    image: alfaiateria,
+    text: "Bermudas em Alfaiataria",
+    type: "Bermudas",
+    descricao: "A bermuda de alfaiataria é a escolha perfeita para quem busca unir conforto, elegância e versatilidade.",
     tempo: "2 horas",
-    valor: "R$ 250,00",
+    valor: "R$ __,__",
   },
   {
-    image: microlabial,
-    text: "Micropigmentação Labial",
-    type: "Lábios",
-    descricao: "Lábios mais definidos e coloridos.",
+    id: 2,
+    image: BermudasLinho,
+    text: "Bermudas Linho",
+    type: "Bermudas",
+    descricao: "Descubra o equilíbrio perfeito entre frescor e sofisticação com nossa bermuda de linho. Confeccionada em tecido natural, leve e respirável, ela é ideal para os dias quentes em que o conforto é essencial, sem abrir mão do estilo.",
     tempo: "1 hora e 30 minutos",
-    valor: "R$ 200,00",
+    valor: "R$ __,__",
   },
   {
-    image: ds,
-    text: "Designe de sobrancelhas",
-    type: "Olhar",
-    descricao: "Sobrancelhas perfeitas e simétricas.",
+    id: 3,
+    image: CPolo1,
+    text: "Camisas Polo",
+    type: "Camisas",
+    descricao: "A camisa polo é um clássico que nunca sai de moda. Com seu design atemporal e versátil, ela é perfeita para diversas ocasiões, desde um passeio casual até um evento mais formal.",
     tempo: "1 hora",
-    valor: "R$ 100,00",
+    valor: "R$ __,__",
   },
   {
-    image: extensaodecilios,
-    text: "Extensão de cílios",
-    type: "Olhar",
-    descricao: "Cílios longos e volumosos.",
-    tempo: "2 horas",
-    valor: "R$ 180,00",
-  },
-  {
-    image: limpezadepele,
-    text: "limpeza de Pele",
-    type: "Pele",
-    descricao: "Pele limpa e renovada.",
+    id: 4,
+    image: CTexturizada1,
+    text: "Camisas Texturizadas",
+    type: "Camisas",
+    descricao: "A camisa texturizada é a escolha ideal para quem busca um toque de sofisticação e um visual único. Com padrões e acabamentos que conferem personalidade à peça, ela traz um ar contemporâneo e estiloso.",
     tempo: "1 hora",
-    valor: "R$ 150,00",
+    valor: "R$ __,__",
   },
   {
-    image: progressivas,
-    text: "Progressivas",
-    type: "Cabelos",
-    descricao: "Cabelos lisos e sem frizz.",
-    tempo: "3 horas",
-    valor: "R$ 300,00",
-  },
-  {
-    image: hidratacao,
-    text: "Hidratação",
-    type: "Cabelos",
-    descricao: "Cabelos hidratados e saudáveis.",
+    id: 5,
+    image: SCouro,
+    text: "Couro Nobre",
+    type: "Calçados",
+    descricao: "Feitos para quem aprecia o verdadeiro significado do requinte, os Calçados em Couro Nobre unem sofisticação, resistência e conforto em uma peça atemporal. ",
     tempo: "1 hora",
-    valor: "R$ 80,00",
+    valor: "R$ __,__",
   },
   {
-    image: cortes,
-    text: "Cortes",
-    type: "Cabelos",
-    descricao: "Corte moderno e estiloso.",
-    tempo: "45 minutos",
-    valor: "R$ 50,00",
-  },
-  {
-    image: coloracao,
-    text: "Coloração",
-    type: "Cabelos",
-    descricao: "Cabelos coloridos e vibrantes.",
-    tempo: "2 horas",
-    valor: "R$ 200,00",
-  },
-  {
-    image: escova,
-    text: "Escova",
-    type: "Cabelos",
-    descricao: "Cabelos lisos e brilhantes.",
+    id: 6,
+    image: CJens2,
+    text: "Jeans Escuro",
+    type: "Calças",
+    descricao: "As calças jeans são essenciais no guarda-roupa de quem valoriza estilo, conforto e versatilidade. Com cortes que valorizam o corpo, lavagem moderna e tecido resistente, elas se adaptam a todas as ocasiões",
     tempo: "1 hora",
-    valor: "R$ 60,00",
-  },
+    valor: "R$ __,__",
+  }, 
   {
-    image: manicure,
-    text: "Manicure e Pedicure",
-    type: "Unhas",
-    descricao: "Unhas bem cuidadas e bonitas.",
-    tempo: "1 hora e 30 minutos",
-    valor: "R$ 80,00",
-  },
-  {
-    image: unhasemgel,
-    text: "unhas em Gel",
-    type: "Unhas",
-    descricao: "Unhas em gel com toda delicadeza.",
+    id: 7,
+    image: MauricinhoSarja1,
+    text: "Mauricinho Sarja ",
+    type: "Bermudas",
+    descricao: "A Bermuda Mauricinho em Sarja é a escolha ideal para quem curte um visual alinhado, moderno e cheio de atitude. Com modelagem slim, cintura ajustada e acabamento premium, ela entrega o equilíbrio perfeito entre o casual e o sofisticado",
     tempo: "1 hora",
-    valor: "R$ 90,00",
+    valor: "R$ __,__",
   },
   {
-    image: drenagemlinfatica,
-    text: "Drenagem Linfática",
-    type: "Pele",
-    descricao: "Redução de inchaço e retenção de líquidos.",
+    id: 8,
+    image: MauricinhoSarja2,
+    text: "Mauricinho Sarja",
+    type: "Bermudas",
+    descricao: "A Bermuda Mauricinho em Sarja é a escolha ideal para quem curte um visual alinhado, moderno e cheio de atitude. Com modelagem slim, cintura ajustada e acabamento premium, ela entrega o equilíbrio perfeito entre o casual e o sofisticado",
     tempo: "1 hora",
-    valor: "R$ 120,00",
+    valor: "R$ __,__",
   },
   {
-    image: pelerelaxante,
-    text: "Pele Relaxante",
-    type: "Pele",
-    descricao: "Relaxamento e bem-estar para a pele.",
-    tempo: "1 hora e 30 minutos",
-    valor: "R$ 150,00",
-  },
-  {
-    image: ventosa,
-    text: "Ventosa",
-    type: "Pele",
-    descricao: "Terapia com ventosas para alívio de dores.",
+    id: 9,
+    image: SMule,
+    text: "Mule",
+    type: "Calçados",
+    descricao: "O calçado mule é a escolha perfeita para quem busca praticidade sem abrir mão do estilo. ",
     tempo: "1 hora",
-    valor: "R$ 100,00",
+    valor: "R$ __,__",
   },
   {
-    image: remocaotatuagem,
-    text: "Remoção de Tatuagem",
-    type: "Pele",
-    descricao: "Remoção segura e eficaz de tatuagens.",
-    tempo: "2 horas",
-    valor: "R$ 300,00",
-  },
-  {
-    image: botox,
-    text: "Botox",
-    type: "Pele",
-    descricao: "Tratamento para redução de rugas e linhas de expressão.",
+    id: 10,
+    image: SMule2,
+    text: "Mule",
+    type: "Calçados",
+    descricao: "O calçado mule é a escolha perfeita para quem busca praticidade sem abrir mão do estilo. ",
     tempo: "1 hora",
-    valor: "R$ 400,00",
+    valor: "R$ __,__",
+  },
+  {
+    id: 11,
+    image: SComfort,
+    text: "Comfort",
+    type: "Calçados",
+    descricao: "Conforto de verdade, design moderno e qualidade que acompanha você o dia todo. Os Calçados Comfort foram pensados para quem valoriza leveza nos pés sem abrir mão do estilo.",
+    tempo: "1 hora",
+    valor: "R$ __,__",
+  },
+  {
+    id: 12,
+    image: CJens,
+    text: "Jeans Claro",
+    type: "Calças",
+    descricao: "As calças jeans são essenciais no guarda-roupa de quem valoriza estilo, conforto e versatilidade. Com cortes que valorizam o corpo, lavagem moderna e tecido resistente, elas se adaptam a todas as ocasiões",
+    tempo: "1 hora",
+    valor: "R$ __,__",
+  }, 
+  {
+    id: 13,
+    image: Cuecas,
+    text: "Lacoste",
+    type: "Cuecas",
+    descricao: "As cuecas Lacoste representam o que há de melhor em conforto, elegância e autenticidade. Confeccionadas com tecidos de alta qualidade e toque ultramacio, elas oferecem ajuste perfeito ao corpo, respirabilidade e liberdade de movimento durante todo o dia.",
+    tempo: "1 hora",
+    valor: "R$ __,__",
+  },
+  {
+    id: 14,
+    image: Cuecas2,
+    text: "Hugo Boss",
+    type: "Cuecas",
+    descricao: "As cuecas Hugo Boss são a definição de elegância, conforto e desempenho para o homem moderno. Com design minimalista e sofisticado, oferecem ajuste preciso, toque suave e suporte ideal para o dia inteiro, sem comprometer o estilo.",
+    tempo: "1 hora",
+    valor: "R$ __,__",
   },
 ];

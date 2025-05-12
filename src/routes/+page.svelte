@@ -42,7 +42,7 @@
        
         <SeparatorLanding/>
         
-        <Cursos/>
+        <!-- <Cursos/> -->
         <Products/>
         <About/>
 

@@ -41,7 +41,7 @@
                 class="inline-block mr-2"
                 alt="Ícone de tempo"/> -->
                 {servico.descricao}</p>
-            <p class="mb-2"><strong>Tempo:</strong> {servico.tempo}</p>
+            <!-- <p class="mb-2"><strong>Tempo:</strong> {servico.tempo}</p> -->
             <p class="mb-4"><strong>Valor:</strong> {servico.valor}</p>
             <button class="px-4 py-2 bg-blue-500 text-white rounded" on:click={closePopup}>Fechar</button>
         </div>

@@ -1,7 +1,7 @@
 <script>
     import { Hamburger } from "svelte-hamburgers";
     import MenuHamburguer from "./MenuHamburguer.svelte";
-    import logo from "$img/logo.png"
+    import logo from "$img/img/seuestilo.svg"
     import { IconSearch } from "@tabler/icons-svelte";
 
     let open = $state(false);
@@ -20,8 +20,8 @@
                     --color="black"
                     bind:open
             /> -->
+            <img src={logo} alt="Logo">
         </div>    
-        <img src={logo} alt="Logo">
         <!-- <nav>
             <a href="/">Sobre</a>
             <a href="/">Contato</a>
@@ -32,12 +32,21 @@
 <MenuHamburguer bind:open />
 
 <style>
+    header {
+        align-items: center;
+        justify-content: center;
+    }
+
     .hamburguer-icon {
         display: none;
-        
         z-index: 1000;
         cursor: pointer;
         color: wheat;
+    }
+
+    img {
+        margin-top: 1.5rem;
+        width: 180px;
     }
 
     /* Esconde o menu normal em telas menores */
