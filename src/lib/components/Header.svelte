@@ -2,8 +2,11 @@
     import { Hamburger } from "svelte-hamburgers";
     import MenuHamburguer from "./MenuHamburguer.svelte";
     import logo from "$img/img/seuestilo.svg"
+    import cartIcon from "$img/cart.svg"
     import { IconSearch } from "@tabler/icons-svelte";
-
+    import { cart as cartStore } from '../stores/cartStore.js';
+    const { onOpenCart = () => {} } = $props();
+    
     let open = $state(false);
 </script>
 
@@ -28,7 +31,11 @@
             <a href="/">Blog</a>
         </nav> -->
         <!-- <IconSearch/> -->
+        <div class="absolute w-12 h-12 flex items-center justify-center top-5 right-7 cursor-pointer rounded-full bg-gray-200" on:click={onOpenCart}>
+            <img id="cart" src={cartIcon} alt="cart" class="w-6 h-6 object-contain align-middle" />
+        </div>
 </header>
+
 <MenuHamburguer bind:open />
 
 <style>
@@ -47,6 +54,11 @@
     img {
         margin-top: 1.5rem;
         width: 180px;
+    }
+
+    #cart {
+        position: relative;
+        top: -0.65rem;
     }
 
     /* Esconde o menu normal em telas menores */
