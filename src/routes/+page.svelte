@@ -12,6 +12,7 @@
     import SeparatorLanding from "$components/SeparatorLanding.svelte";
     import ProdutoLanding from "$components/ProdutoLanding.svelte";
     import CursoLanding from "$components/CursoLanding.svelte";
+    import Cart from "$components/Cart.svelte";
 
     import {
         IconArrowRight,
@@ -25,16 +26,20 @@
     // import utils
     import logo from "$img/logo.png";
 
-  
-   
-
-    
+    let showCart = false;
+    function openCart() {
+        showCart = true;
+    }
+    function closeCart() {
+        showCart = false;
+    }
 </script>
 
 <main>
-   
-    <Header />
-   
+    <Header onOpenCart={openCart} />
+    {#if showCart}
+        <Cart on:close={closeCart} />
+    {/if}
     <section id="main_content" class="flex flex-col items-center bg-slate-50">
 
         <Banner />
