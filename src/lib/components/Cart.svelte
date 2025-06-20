@@ -37,7 +37,7 @@
     }
 </script>
 
-<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
+<div class="fixed bottom-4 right-4 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden">
         <div class="p-6 relative">
             <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-800" on:click={() => dispatch('close')} title="Fechar carrinho">
