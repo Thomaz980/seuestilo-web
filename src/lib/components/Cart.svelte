@@ -15,7 +15,7 @@
     }
 
     function enviarWhatsApp() {
-        const numero = "5581986514383";
+        const numero = "5581993880905"; 
         let mensagem = `*Olá! Gostaria de comprar os seguintes produtos:* \n`;
         $cart.forEach(item => {
             let imagem = item.image;

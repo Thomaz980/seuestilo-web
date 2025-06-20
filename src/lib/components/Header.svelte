@@ -40,7 +40,6 @@
 
 <style>
     header {
-        position: fixed;
         align-items: center;
         justify-content: center;
     }
