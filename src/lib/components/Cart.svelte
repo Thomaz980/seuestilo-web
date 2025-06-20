@@ -16,7 +16,7 @@
 
     function enviarWhatsApp() {
         const numero = "5581986514383";
-        let mensagem = `*Olá! Gostaria de comprar os seguintes produtos:*`;
+        let mensagem = `*Olá! Gostaria de comprar os seguintes produtos:* \n`;
         $cart.forEach(item => {
             let imagem = item.image;
             if (item.options && item.options["Cor"] && item.options["Img"]) {
@@ -25,11 +25,11 @@
                     imagem = item.options["Img"][corIdx];
                 }
             }
-            mensagem += `\nProduto: ${item.text}`;
-            mensagem += `\nTamanho: ${item.tamanho}`;
-            mensagem += `\nPreço: ${item.valor}`;
-            mensagem += `\nImagem: ${imagem}`;
-            mensagem += `\nQuantidade: ${item.quantidade}`;
+            mensagem += `\n *Produto:* ${item.text}`;
+            mensagem += `\n *Tamanho:* ${item.tamanho}`;
+            mensagem += `\n *Preço:* ${item.valor}`;
+            mensagem += `\n *Imagem:* ${imagem}`;
+            mensagem += `\n *Quantidade:* ${item.quantidade}`;
             mensagem += `\n-------------------------`;
         });
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
