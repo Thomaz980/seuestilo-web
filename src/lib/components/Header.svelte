@@ -47,7 +47,7 @@
 
     .hamburguer-icon {
         display: none;
-        z-index: 1000;
+        z-index: 1001;
         cursor: pointer;
         color: wheat;
     }
