@@ -6,6 +6,10 @@
 
     const dispatch = createEventDispatcher();
 
+    let pagamento = "Pix";
+    let entrega = "Retirada na loja";
+    let etapaFinalizacao = false;
+
     function handleTamanhoChange(item, event) {
         removeFromCart(item.id, item.tamanho);
         cart.update(items => [
@@ -15,7 +19,7 @@
     }
 
     function enviarWhatsApp() {
-        const numero = "5581993880905"; 
+        const numero = "5581998659330"; // 5581993880905
         let mensagem = `*Olá! Gostaria de comprar os seguintes produtos:* \n`;
         $cart.forEach(item => {
             let imagem = item.image;
@@ -32,12 +36,18 @@
             mensagem += `\n *Quantidade:* ${item.quantidade}`;
             mensagem += `\n-------------------------`;
         });
+        mensagem += `\n*Forma de pagamento:* ${pagamento}`;
+        mensagem += `\n*Forma de entrega:* ${entrega}`;
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
         window.open(url, "_blank");
     }
+
+    function finalizarPedido() {
+        etapaFinalizacao = true;
+    }
 </script>
 
-<div class="fixed bottom-4 right-4 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
+<div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden">
         <div class="p-6 relative">
             <button class="absolute top-2 right-2 text-gray-500 hover:text-gray-800" on:click={() => dispatch('close')} title="Fechar carrinho">
@@ -84,11 +94,37 @@
                         </li>
                     {/each}
                 </ul>
-                <div class="flex justify-center mt-4 gap-2">
-                    <button class="px-4 py-2 bg-[#68B261] text-white rounded" on:click={enviarWhatsApp}>
-                        Enviar pedido pelo WhatsApp
-                    </button>
-                </div>
+                {#if !etapaFinalizacao}
+                    <div class="flex justify-center mt-4">
+                        <button class="px-4 py-2 bg-[#68B261] text-white rounded" on:click={finalizarPedido}>
+                            Finalizar pedido
+                        </button>
+                    </div>
+                {:else}
+                    <div class="flex flex-col gap-4 mt-4">
+                        <div class="flex flex-col gap-2">
+                            <div>
+                                <span class="block text-sm text-gray-700 mb-1 font-semibold">Forma de pagamento:</span>
+                                <div class="flex gap-2">
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {pagamento === 'Pix' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => pagamento = 'Pix'}>Pix</button>
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {pagamento === 'Cartão' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => pagamento = 'Cartão'}>Cartão</button>
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {pagamento === 'Dinheiro' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => pagamento = 'Dinheiro'}>Dinheiro</button>
+                                </div>
+                            </div>
+                            <div>
+                                <span class="block text-sm text-gray-700 mb-1 font-semibold">Forma de entrega:</span>
+                                <div class="flex gap-2">
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {entrega === 'Retirada na loja' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => entrega = 'Retirada na loja'}>Retirada na loja</button>
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {entrega === 'Correios' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => entrega = 'Correios'}>Correios</button>
+                                    <button type="button" class="px-3 py-1 rounded border transition-colors duration-150 focus:outline-none {entrega === 'Entregador' ? 'bg-[#68B261] text-white border-[#68B261]' : 'bg-white text-gray-700 border-gray-300'}" on:click={() => entrega = 'Entregador'}>Entregador</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="px-4 py-2 bg-[#68B261] text-white rounded" on:click={enviarWhatsApp}>
+                            Enviar pedido pelo WhatsApp
+                        </button>
+                    </div>
+                {/if}
             {/if}
         </div>
     </div>
