@@ -31,7 +31,7 @@
     }
 
     function enviarWhatsApp() {
-        const numero = "5581986514383"; //993880905
+        const numero = "5581993880905"; //993880905
         let mensagem = `*Olá! Gostaria de comprar os seguintes produtos:* \n`;
         // Agrupar por produto
         const produtosAgrupados = {};
