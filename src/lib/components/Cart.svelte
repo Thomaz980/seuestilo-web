@@ -57,10 +57,12 @@
                 produtosAgrupados[key].corNomeQtd[corNome] = 0;
             }
             produtosAgrupados[key].corNomeQtd[corNome] += item.quantidade;
+            // Salva o valor correto para o produto (considerando tamanho)
+            produtosAgrupados[key].valorFormatado = formatarValor(valorPorTamanho(item));
         });
         Object.values(produtosAgrupados).forEach(produto => {
             mensagem += `\n*Produto:* ${produto.text}`;
-            mensagem += `\n*Preço:* ${produto.valor}`;
+            mensagem += `\n*Preço:* ${produto.valorFormatado}`;
             mensagem += `\n*Tamanhos/Cores:*`;
             Object.entries(produto.corNomeQtd).forEach(([corNome, qtd]) => {
                 mensagem += `\n- ${corNome}: ${qtd} unidade${qtd > 1 ? 's' : ''}`;
