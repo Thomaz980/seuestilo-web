@@ -8,11 +8,17 @@ import CTexturizada1 from "$img/camisas/texturizadas1.jpg";
 import Polo1 from "$img/camisas/polo1.jpg";
 import Cuecas from "$img/cuecas/cuecas1.jpg";
 import Cuecas2 from "$img/cuecas/boss.jpg";
+import cSarga1 from "$img/calcas/calca-marinho.jpeg";
+import cSarga2 from "$img/calcas/calca-beje.jpeg";
+import cSarga3 from "$img/calcas/calca-gelo.jpeg";
+import cSarga4 from "$img/calcas/calca-marrom.jpeg";
+import cSarga5 from "$img/calcas/calca-militar.jpeg";
+import cSarga6 from "$img/calcas/calca-preto.jpeg";
 
 // ------ BERMUDAS ALFAITARIA ----- // 
 import B01 from "$img/bermudas/photo-output 2.jpg"; 
 import B02 from "$img/bermudas/ba-preta.png"; 
-import B03 from "$img/bermudas/ba-bege.png"; 
+import B03 from "$img/bermudas/bermudaBege.jpeg"; 
 import B04 from "$img/bermudas/ba-marrom.png"; 
 import B05 from "$img/bermudas/ba-cinza.png"; 
 import B06 from "$img/bermudas/ba-azul.png"; 
@@ -28,15 +34,16 @@ export const servicos = [
   {
     id: 1,
     image: B01,
-    text: "Bermudas em Alfaiataria",
+    text: "Bermuda Alfaiataria (Sarja)",
     type: "Bermudas",
     descricao: "A bermuda de alfaiataria é a escolha perfeita para quem busca unir conforto, elegância e versatilidade.",
     options: {
-      "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["F2EDEA", "3A3436", "E0C4B6", "948067", "85858D", "3E445C"],
+      "Tamanho": ["38", "40", "42", "44", "46"],
+      "Cor": ["F2EDEA", "3A3436", "E7C190", "948067", "85858D", "3E445C"],
+      "NomeCor": ["Branco Gelo", "Preto", "Beje", "Verde Militar", "Chumbo", "Azul Marinho"],
       "Img": [B01, B02, B03, B04, B05, B06],
     },
-    valor: "R$ __,__",
+    valor: 130.00
   },
   {
     id: 2,
@@ -47,9 +54,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["A45E4A"],
+      "NomeCor": ["Estoque"],
       "Img": [B07],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 3,
@@ -60,9 +68,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["245630"],
+      "NomeCor": ["Estoque"],
       "Img": [Polo1],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 4,
@@ -73,9 +82,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["CADA99"],
+      "NomeCor": ["Estoque"],
       "Img": [CTexturizada1],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 5,
@@ -86,22 +96,24 @@ export const servicos = [
     options: {
       "Tamanho": ["38", "39", "40", "41", "42", "43"],
       "Cor": ["B17C6E"],
+      "NomeCor": ["Estoque"],
       "Img": [SCouro],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 6,
-    image: CJens2,
-    text: "Jeans Escuro",
+    image: cSarga1,
+    text: "Calça alfaiataria (sarja)",
     type: "Calças",
     descricao: "As calças jeans são essenciais no guarda-roupa de quem valoriza estilo, conforto e versatilidade. Com cortes que valorizam o corpo, lavagem moderna e tecido resistente, elas se adaptam a todas as ocasiões",
     options: {
-      "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["080F2E"],
-      "Img": [CJens2],
+      "Tamanho": ["38", "40", "42", "44", "46", "48", "50", "52", "54"],
+      "Cor": ["292836", "D3B289", "EAE5E1", "714A45", "675541", "383337"],
+      "NomeCor": ["Azul Marinho", "Beje", "Gelo", "Marrom", "Verde Militar", "Preto"],
+      "Img": [cSarga1, cSarga2, cSarga3, cSarga4, cSarga5, cSarga6],
     },
-    valor: "R$ __,__",
+    valor: 160.00,
   }, 
   {
     id: 7,
@@ -112,9 +124,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["121112"],
+      "NomeCor": ["Estoque"],
       "Img": [MauricinhoSarja1],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 8,
@@ -125,9 +138,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["1F1C1F"],
+      "NomeCor": ["Estoque"],
       "Img": [MauricinhoSarja2],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 9,
@@ -138,9 +152,10 @@ export const servicos = [
     options: {
       "Tamanho": ["38", "39", "40", "41", "42", "43"],
       "Cor": ["353943"],
+      "NomeCor": ["Estoque"],
       "Img": [SMule],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 10,
@@ -151,9 +166,10 @@ export const servicos = [
     options: {
       "Tamanho": ["38", "39", "40", "41", "42", "43"],
       "Cor": ["B8C3D5"],
+      "NomeCor": ["Estoque"],
       "Img": [SMule2],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 11,
@@ -164,9 +180,10 @@ export const servicos = [
     options: {
       "Tamanho": ["38", "39", "40", "41", "42", "43"],
       "Cor": ["F4F7FE"],
+      "NomeCor": ["Estoque"],
       "Img": [SComfort],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 12,
@@ -177,9 +194,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["071222"],
+      "NomeCor": ["Estoque"],
       "Img": [CJens],
     },
-    valor: "R$ __,__",
+    valor: 0,
   }, 
   {
     id: 13,
@@ -190,9 +208,10 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["363348", "DE2A35", "7E7A7B", "0B0B0B", "E0DBD8"],
+      "NomeCor": ["Estoque"],
       "Img": [Cuecas, Cuecas, Cuecas, Cuecas, Cuecas],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
   {
     id: 14,
@@ -203,10 +222,26 @@ export const servicos = [
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["071222", "111520", "0046BC", "8496AC", "0C1A35"],
+      "NomeCor": ["Estoque"],
       "Img": [Cuecas2, Cuecas2, Cuecas2, Cuecas2, Cuecas2],
     },
-    valor: "R$ __,__",
+    valor: 0,
   },
+  {
+    id: 15,
+    image: CJens2,
+    text: "Jeans Escuro",
+    type: "Calças",
+    descricao: "As calças jeans são essenciais no guarda-roupa de quem valoriza estilo, conforto e versatilidade. Com cortes que valorizam o corpo, lavagem moderna e tecido resistente, elas se adaptam a todas as ocasiões",
+    options: {
+      "Tamanho": ["P", "M", "G", "GG"],
+      "Cor": ["080F2E"],
+      "NomeCor": ["Estoque"],
+      "Img": [CJens2],
+    },
+    valor: 0,
+  }, 
+ 
 ];
 
 

@@ -13,7 +13,7 @@ cart.subscribe(items => {
 
 export function addToCart(item) {
     cart.update(items => {
-        const idx = items.findIndex(i => i.id === item.id && i.tamanho === item.tamanho);
+        const idx = items.findIndex(i => i.id === item.id && i.tamanho === item.tamanho && i.cor === item.cor);
         if (idx > -1) {
             items[idx].quantidade += 1;
             return [...items];

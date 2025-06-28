@@ -5,9 +5,8 @@
     import cartIcon from "$img/cart.svg"
     import { IconSearch } from "@tabler/icons-svelte";
     import { cart as cartStore } from '../stores/cartStore.js';
-    const { onOpenCart = () => {} } = $props();
-    
-    let open = $state(false);
+    export let onOpenCart = () => {};
+    let open = false;
 </script>
 
 <header class="w-full px-4 lg:px-6 h-24 text-lg flex items-center justify-center bg-slate-50 border border-gray-50 rounded-2xl">       
