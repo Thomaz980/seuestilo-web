@@ -106,7 +106,7 @@ export const servicos = [
     image: cSarga1,
     text: "Calça alfaiataria (sarja)",
     type: "Calças",
-    descricao: "As calças jeans são essenciais no guarda-roupa de quem valoriza estilo, conforto e versatilidade. Com cortes que valorizam o corpo, lavagem moderna e tecido resistente, elas se adaptam a todas as ocasiões",
+    descricao: "Confeccionada em tecido estruturado de alta qualidade, ela oferece caimento impecável, conforto e estilo.",
     options: {
       "Tamanho": ["38", "40", "42", "44", "46", "48", "50", "52", "54"],
       "Cor": ["292836", "D3B289", "EAE5E1", "714A45", "675541", "383337"],
