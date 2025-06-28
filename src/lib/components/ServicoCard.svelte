@@ -46,6 +46,11 @@
         closePopup();
     }
 
+    // Função para formatar valor como moeda BRL
+    function formatarValor(valor) {
+        return Number(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    }
+
     $: console.log("Current cart items:", JSON.stringify($cart, null, 2));
 </script>
 
@@ -85,7 +90,7 @@
                 {/each}
             </div>
             <div class="flex gap-2 mt-2">
-                <button class="px-4 py-2 bg-[#EBE1FF] text-black rounded" on:click={closePopup}>{servico.valor}</button>
+                <button class="px-4 py-2 bg-[#EBE1FF] text-black rounded" on:click={closePopup}>{formatarValor(servico.valor)}</button>
                 <button class="px-4 py-2 bg-[#68B261] text-white rounded flex items-center justify-center gap-2" on:click={comprar}>
                     Comprar <img src={cartIcon} alt="carrinho" class="w-5 h-5 ml-1" />
                 </button>
