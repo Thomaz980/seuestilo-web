@@ -212,10 +212,10 @@
         <div class="bg-white rounded-lg shadow-lg p-6 max-w-xs w-full flex flex-col items-center gap-4" role="dialog" aria-modal="true" aria-label="Escolher atendente WhatsApp">
             <h3 class="text-lg font-semibold mb-2">Escolha o atendente:</h3>
             <button class="w-full px-4 py-2 bg-[#68B261] text-white rounded mb-2 flex items-center justify-center gap-2" on:click={() => escolherNumero('5581993880905')} aria-label="Enviar para Reyson">
-                <img src={whatsappIcon} alt="WhatsApp" class="w-5 h-5" /> Reyson
+                <img src={whatsappIcon} alt="WhatsApp" class="w-5 h-5" /> Consultor Reyson
             </button>
             <button class="w-full px-4 py-2 bg-[#68B261] text-white rounded flex items-center justify-center gap-2" on:click={() => escolherNumero('5581992881187')} aria-label="Enviar para Joseph">
-                <img src={whatsappIcon} alt="WhatsApp" class="w-5 h-5" /> Joseph
+                <img src={whatsappIcon} alt="WhatsApp" class="w-5 h-5" /> Consultor Joseph
             </button>
             <button class="mt-2 text-gray-500" on:click={fecharPopupNumero} aria-label="Cancelar">Cancelar</button>
         </div>
