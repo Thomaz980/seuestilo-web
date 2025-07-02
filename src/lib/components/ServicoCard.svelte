@@ -5,20 +5,27 @@
     import { addToCart, cart } from '../stores/cartStore.js';
     export let servico = {};
 
-    let showPopup = false;
+    export let showPopup = undefined; // permite controle externo
+
     let selectedImg = servico.image;
     let selectedTamanho = servico.options?.["Tamanho"] ? servico.options["Tamanho"][0] : undefined;
     let selectedCor = servico.options?.["Cor"] ? servico.options["Cor"][0] : undefined;
     let showFeedback = false;
+    let showPopupLocal = false;
+
+    $: popupAberto = showPopup === undefined ? showPopupLocal : showPopup;
 
     function openPopup() {
-        showPopup = true;
-        selectedImg = servico.image;
-        selectedCor = servico.options?.["Cor"] ? servico.options["Cor"][0] : undefined;
+        if (showPopup === undefined) {
+            showPopupLocal = true;
+        }
     }
-
     function closePopup() {
-        showPopup = false;
+        if (showPopup === undefined) {
+            showPopupLocal = false;
+        } else {
+            showPopup = false;
+        }
     }
 
     function selectImg(idx) {
@@ -43,7 +50,12 @@
         });
         showFeedback = true;
         setTimeout(() => showFeedback = false, 1800);
-        closePopup();
+        // Fechar popup só depois do feedback sumir se for controle externo
+        if (showPopup === undefined) {
+            closePopup();
+        } else {
+            setTimeout(() => showPopup = false, 1800);
+        }
     }
 
     // Função para formatar valor como moeda BRL
@@ -51,21 +63,19 @@
         return Number(valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     }
 
+    function getObjectPosition(servico) {
+        if (servico.objectPosition) return servico.objectPosition;
+        if (servico.offsetX || servico.offsetY)
+            return `${servico.offsetX || 'center'} ${servico.offsetY || 'center'}`;
+        if (servico.offset) // compatibilidade antiga
+            return `center ${servico.offset}`;
+        return 'center center';
+    }
+
     $: console.log("Current cart items:", JSON.stringify($cart, null, 2));
 </script>
 
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="relative max-w-40 h-60 overflow-hidden rounded-lg cursor-pointer" on:click={openPopup}>
-    <img src={servico.image} alt="Imagem de Serviço"/>
-    <div class="absolute bottom-0 left-0 right-0 h-16 w-full overflow-hidden bg-fixed" style="background-color: hsla(0, 0%, 0%, 0.4)">
-        <div class="flex h-full items-center justify-center text-sm text-center">
-            <p class="text-white opacity-100">{servico.text}</p>
-        </div>
-    </div>
-</div>
-
-{#if showPopup}
+{#if popupAberto}
 <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade>
     <div class="bg-white rounded-lg shadow-lg max-w-md w-full overflow-hidden relative">
         <button class="absolute top-3 right-3 bg-white rounded-full shadow p-1 text-gray-500 hover:text-gray-800 z-10" on:click={closePopup} title="Fechar">
@@ -75,7 +85,7 @@
         </button>
         <img 
             class="w-full object-cover" 
-            style="height: 180px;" 
+            style={`height: 180px; object-position: ${getObjectPosition(servico)};`}
             src={selectedImg} 
             alt="Imagem de Serviço" 
         />
@@ -90,12 +100,29 @@
                 {/each}
             </div>
             <div class="flex gap-2 mt-2">
-                <button class="px-4 py-2 bg-[#EBE1FF] text-black rounded" on:click={closePopup}>{formatarValor(servico.valor)}</button>
+                <button class="px-4 py-2 bg-[#D1D5DB] text-black rounded" on:click={closePopup}>{formatarValor(servico.valor)}</button>
                 <button class="px-4 py-2 bg-[#68B261] text-white rounded flex items-center justify-center gap-2" on:click={comprar}>
-                    Comprar <img src={cartIcon} alt="carrinho" class="w-5 h-5 ml-1" />
+                     Comprar <img src={cartIcon} alt="carrinho" class="w-5 h-5 ml-1" />
                 </button>
             </div>
         </div>
+    </div>
+</div>
+{/if}
+
+{#if showPopup === undefined}
+<div class="servico-card-preview" on:click={openPopup} tabindex="0" role="button" aria-label={`Visualizar detalhes de ${servico.text}`}
+    style="width: 10rem; min-width: 10rem; max-width: 10rem;">
+    <div class="servico-card-img-wrapper" style="width: 100%; height: 100%;">
+        <img 
+            src={servico.image} 
+            alt="Imagem de Serviço" 
+            style={`width: 100%; height: 100%; object-fit: cover; object-position: ${getObjectPosition(servico)}; display: block;`} 
+            draggable="false"
+        />
+    </div>
+    <div class="servico-card-title-bar">
+        <p class="servico-card-title">{servico.text}</p>
     </div>
 </div>
 {/if}
@@ -119,6 +146,59 @@
         top: 0;
         transform: translate(-50%, 0);
         margin-top: 2rem;
+    }
+    .servico-card-preview {
+        position: relative;
+        width: 10rem;
+        height: 15rem;
+        max-width: 10rem;
+        min-width: 10rem;
+        max-height: 15rem;
+        min-height: 15rem;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+    }
+    .servico-card-img-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .servico-card-img-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        max-width: unset;
+        max-height: unset;
+    }
+    .servico-card-title-bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3.5rem;
+        background: linear-gradient(0deg, rgba(0,0,0,0.5) 80%, transparent 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+    .servico-card-title {
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        margin: 0;
     }
     .relative {
         position: relative;
