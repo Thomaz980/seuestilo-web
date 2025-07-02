@@ -5,7 +5,6 @@ import SMule2 from "$img/calcados/mule2.jpg";
 import CJens from "$img/calcas/jeansAzul.png";
 import CJens2 from "$img/calcas/jeansEscuro.png";
 import CTexturizada1 from "$img/camisas/texturizadas1.jpg";
-import Polo1 from "$img/camisas/polo1.jpg";
 import Cuecas from "$img/cuecas/cuecas1.jpg";
 import Cuecas2 from "$img/cuecas/boss.jpg";
 import cSarga1 from "$img/calcas/calca-marinho.jpeg";
@@ -23,12 +22,102 @@ import B04 from "$img/bermudas/ba-marrom.png";
 import B05 from "$img/bermudas/ba-cinza.png"; 
 import B06 from "$img/bermudas/ba-azul.png"; 
 
+// ------ POLO PIQUET “V” ----- // 
+import PQ01 from "$img/camisas/Polo_PiquetV_Beje.jpeg";
+import PQ02 from "$img/camisas/Polo_PiquetV_BrancoGelo.jpeg";
+import PQ03 from "$img/camisas/Polo_PiquetV_Chumbo.jpeg";
+import PQ04 from "$img/camisas/Polo_PiquetV_Preto.jpeg";
+import PQ05 from "$img/camisas/Polo_PiquetV_AzulMarinho.jpeg";
+
+// ------ GOLA MÉDIA SUEDINE ----- // 
+import Polo1 from "$img/camisas/polo1.jpg";
+import GS02 from "$img/camisas/Gola_Suedine_Verme.jpeg";
+import GS03 from "$img/camisas/Gola_Suedine_AzulMarinho.jpeg";
+import GS04 from "$img/camisas/Gola_Suedine_Preto.jpeg";
+import GS05 from "$img/camisas/Gola_Suedine_Marrom.jpeg";
+import GS06 from "$img/camisas/Gola_Suedine_OffWhite.jpeg";
+
 // ------ BERMUDAS LINHO----- // 
-import B07 from "$img/bermudas/FullSizeRender.jpg";
+import B07 from "$img/calcas/calcaJeans.jpeg";
 
 // ------ BERMUDAS MAURICINHO ----- // 
 import MauricinhoSarja1 from "$img/bermudas/mSarga1.jpg";
 import MauricinhoSarja2 from "$img/bermudas/mSarga2.jpeg";
+
+// ------ CURTA SELECT ----- //
+import CS1 from "$img/camisas/Curta_Select_Branco.jpeg";
+import CS2 from "$img/camisas/Curta_Select_Vinho.jpeg";
+import CS3 from "$img/camisas/Curta_Select_AzulMarinho.jpeg";
+import CS4 from "$img/camisas/Curta_Select_Preto.jpeg";
+import CS5 from "$img/camisas/Curta_Select_AzulRoyal.jpeg";
+import CS6 from "$img/camisas/Curta_Select_Caramelo.jpeg";
+
+// ------ LONGA SELECT ----- //
+import LS1 from "$img/camisas/Longa_Select_Branco.jpeg";
+import LS2 from "$img/camisas/Longa_Select_Chumbo.jpeg";
+import LS3 from "$img/camisas/Longa_Select_Preto.jpeg";
+import LS4 from "$img/camisas/Longa_Select_Marrom.jpeg";
+import LS5 from "$img/camisas/Longa_Select_VerdePetroleo.jpeg";
+
+// ------ GOLA PADRE “VISCOLINHO” ----- //
+import GPV1 from "$img/camisas/Gola_Padre_Viscolinho_Verde.jpeg";
+import GPV2 from "$img/camisas/Gola_Padre_Viscolinho_Branco.jpeg";
+import GPV3 from "$img/camisas/Gola_Padre_Viscolinho_VerdeMilitar.jpeg";
+import GPV4 from "$img/camisas/Gola_Padre_Viscolinho_AzulMarinho.jpeg";
+import GPV5 from "$img/camisas/Gola_Padre_Viscolinho_Caqui.jpeg";
+import GPV6 from "$img/camisas/Gola_Padre_Viscolinho_Beje.jpeg";
+import GPV7 from "$img/camisas/Gola_Padre_Viscolinho_Caramelo.jpeg";
+import GPV8 from "$img/camisas/Gola_Padre_Viscolinho_AzulRoyal.jpeg";
+import GPV9 from "$img/camisas/Gola_Padre_Viscolinho_Preto.jpeg";
+
+// ------ CURTA LINHO ----- //
+import CL1 from "$img/camisas/Curta_Linho_Vinho.jpeg";
+import CL2 from "$img/camisas/Curta_Linho_Preto.jpeg";
+import CL3 from "$img/camisas/Curta_Linho_Branco.jpeg";
+
+// ------ CALÇADOS ----- //
+import TRACTORBLACK from "$img/calcados/TRACTORBLACK.jpeg";
+
+import TRACTOR_CONHAQUE from "$img/calcados/TRACTOR_CONHAQUE.jpeg";
+
+import LOAFERBLACK from "$img/calcados/LOAFERBLACK.jpeg";
+import LOAFERHAVANA from "$img/calcados/LOAFERHAVANA.jpeg";
+import LOAFER_CONHAQUE from "$img/calcados/LOAFER_CONHAQUE.jpeg";
+
+import LOAFER_HAVANA_DATALHES from "$img/calcados/LOAFER_HAVANA_DATALHES.jpeg";
+
+import LOAFER_WHITE from "$img/calcados/LOAFER_WHITE.jpeg";
+
+import SNEAKEBLACK from "$img/calcados/SNEAKEBLACK.jpeg";
+import SNEAKE_CONHAQUE from "$img/calcados/SNEAKE_CONHAQUE.jpeg";
+
+import SNEAKE_HORUS_MARINHO from "$img/calcados/SNEAKE_HORUS_MARINHO.jpeg";
+
+import SNEAKE_BRANCO from "$img/calcados/SNEAKE_BRANCO.jpeg";
+import SNEAKE_CAMURÇA from "$img/calcados/SNEAKE_CAMURÇA.jpeg";
+import SNEAKER_HORUS_CINZA from "$img/calcados/SNEAKER_HORUS_CINZA.jpeg";
+import SNEAKE_DERBY_CONHAQUE from "$img/calcados/SNEAKE_DERBY_CONHAQUE.jpeg";
+import SNEAKE_COMFORT_BLACK from "$img/calcados/SNEAKE_COMFORT_BLACK.jpeg";
+import SNEAKE_COMFORT_CONHAQUE from "$img/calcados/SNEAKE_COMFORT_CONHAQUE.jpeg";
+import SNEAKE_COMFORT_WHITE from "$img/calcados/SNEAKE_COMFORT_WHITE.jpeg";
+
+import TRATORADO_HAVANA from "$img/calcados/TRATORADO_HAVANA.jpeg";
+import TRATORADO_BLACK from "$img/calcados/TRATORADO_BLACK.jpeg";
+
+import PREMIUM_BLACK from "$img/calcados/PREMIUM_BLACK.jpeg";
+
+// ------ CINTOS ----- //
+import CINTO_DUPLA_FACE from "$img/cintos/CINTO_DUPLA_FACE.jpeg";
+
+
+// Propriedades 
+/*
+    - objectPosition: "left 20px top 10px" (objectPosition Define o valor completo do CSS object-position)
+    - offsetX: "left" (offsetX Define apenas o eixo horizontal do object-position.)
+    - offsetY: "10px" (offsetY Define apenas o eixo vertical do object-position.)
+    - offset: "-10px" (só para vertical)
+*/
+
 
 export const servicos = [
   {
@@ -48,44 +137,49 @@ export const servicos = [
   {
     id: 2,
     image: B07,
-    text: "Bermudas Linho",
-    type: "Bermudas",
-    descricao: "Descubra o equilíbrio perfeito entre frescor e sofisticação com nossa bermuda de linho. Confeccionada em tecido natural, leve e respirável, ela é ideal para os dias quentes em que o conforto é essencial, sem abrir mão do estilo.",
+    text: "Calça Jeans Premium",
+    type: "Calças",
+    descricao: "Descrição",
     options: {
-      "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["A45E4A"],
+      "Tamanho": ["38", "40", "42", "44", "46"],
+      "Cor": ["0D3C68"],
       "NomeCor": ["Estoque"],
       "Img": [B07],
     },
-    valor: 0,
+    offsetX: "left",
+    valor: 170.00,
   },
   {
     id: 3,
-    image: Polo1,
-    text: "Camisas Polo",
+    image: GS02,
+    text: "Gola Média Suedine",
     type: "Camisas",
-    descricao: "A camisa polo é um clássico que nunca sai de moda. Com seu design atemporal e versátil, ela é perfeita para diversas ocasiões, desde um passeio casual até um evento mais formal.",
+    descricao: "A camisa polo éDescrição",
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["245630"],
-      "NomeCor": ["Estoque"],
-      "Img": [Polo1],
+      "Cor": ["25343B", "122953", "1E1D28", "47282D", "D7DBE6"],
+      "NomeCor": ["Verme", "Azul Marinho", "Preto", "Marrom", "Off White"],
+      "Img": [GS02, GS03, GS04, GS05, GS06],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 80.00,
   },
   {
     id: 4,
-    image: CTexturizada1,
-    text: "Camisas Texturizadas",
+    image: PQ01,
+    text: "Polo Piquet V",
     type: "Camisas",
-    descricao: "A camisa texturizada é a escolha ideal para quem busca um toque de sofisticação e um visual único. Com padrões e acabamentos que conferem personalidade à peça, ela traz um ar contemporâneo e estiloso.",
+    descricao: "Descrição",
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["CADA99"],
-      "NomeCor": ["Estoque"],
-      "Img": [CTexturizada1],
+      "Cor": ["EEB798", "F2EADF", "4E4E5A", "262432", "3C436F" ],
+      "NomeCor": ["Bege", "Branco Gelo", "Chumbo", "Preto", "Azul Marinho"],
+      "Img": [PQ01, PQ02, PQ03, PQ04, PQ05],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 125.00,
   },
   {
     id: 5,
@@ -117,59 +211,67 @@ export const servicos = [
   }, 
   {
     id: 7,
-    image: MauricinhoSarja1,
-    text: "Mauricinho Sarja ",
-    type: "Bermudas",
-    descricao: "A Bermuda Mauricinho em Sarja é a escolha ideal para quem curte um visual alinhado, moderno e cheio de atitude. Com modelagem slim, cintura ajustada e acabamento premium, ela entrega o equilíbrio perfeito entre o casual e o sofisticado",
+    image: CS2,
+    text: "Curta Select",
+    type: "Camisas",
+    descricao: "Descrição",
     options: {
-      "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["121112"],
-      "NomeCor": ["Estoque"],
-      "Img": [MauricinhoSarja1],
+      "Tamanho": ["P", "M", "G", "GG", "G1", "G2", "G3"],
+      "Cor": ["C62670", "F3F8FE", "36538D", "1B1A20", "325DCD", "CDB996"],
+      "NomeCor": ["Vinho", "Branco", "Azul Marinho", "Preto", "Azul Royal", "Caramelo"],
+      "Img": [CS2, CS1, CS3, CS4, CS5, CS6],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 110.00, // Valor: P ao GG = R$ 110,00 // Valor: G1 ao G3 = R$ 130,00
   },
   {
     id: 8,
-    image: MauricinhoSarja2,
-    text: "Mauricinho Sarja",
-    type: "Bermudas",
-    descricao: "A Bermuda Mauricinho em Sarja é a escolha ideal para quem curte um visual alinhado, moderno e cheio de atitude. Com modelagem slim, cintura ajustada e acabamento premium, ela entrega o equilíbrio perfeito entre o casual e o sofisticado",
+    image: LS2,
+    text: "Longa Select",
+    type: "Camisas",
+    descricao: "Descrição",
     options: {
-      "Tamanho": ["P", "M", "G", "GG"],
-      "Cor": ["1F1C1F"],
-      "NomeCor": ["Estoque"],
-      "Img": [MauricinhoSarja2],
+      "Tamanho": ["P", "M", "G", "GG", "G1", "G2", "G3"],
+      "Cor": ["588EB4", "C7D4FE", "2D2B38", "634249", "194C50"],
+      "NomeCor": ["Branco", "Chumbo", "Preto", "Marrom", "Verde Petroleo"],
+      "Img": [LS2, LS1, LS3, LS4, LS5],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 130.00, // Valores: P ao GG R$ 130,00 // Valores: G1 ao G3 R$ 150,00
   },
   {
     id: 9,
-    image: SMule,
-    text: "Mule",
-    type: "Calçados",
-    descricao: "O calçado mule é a escolha perfeita para quem busca praticidade sem abrir mão do estilo. ",
+    image: GPV1,
+    text: "Gola Padre Viscolinho",
+    type: "Camisas",
+    descricao: "Descrição",
     options: {
-      "Tamanho": ["38", "39", "40", "41", "42", "43"],
-      "Cor": ["353943"],
-      "NomeCor": ["Estoque"],
-      "Img": [SMule],
+      "Tamanho": ["P", "M", "G", "GG"],
+      "Cor": ["AFDDD0", "F1F1F1", "69765C", "28246F", "AC98A4" ,"E3D9D7", "DC8B66", "2651D1", "25263A"],
+      "NomeCor": ["Verde", "Branco", "Verde Militar", "Azul Marinho", "Caqui", "Beje", "Caramelo", "Azul Royal", "Preto"],
+      "Img": [GPV1, GPV2, GPV3, GPV4, GPV5, GPV6, GPV7, GPV8, GPV9],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 110.00,
   },
   {
     id: 10,
-    image: SMule2,
-    text: "Mule",
-    type: "Calçados",
-    descricao: "O calçado mule é a escolha perfeita para quem busca praticidade sem abrir mão do estilo. ",
+    image: CL2,
+    text: "Curta Linho",
+    type: "Camisas",
+    descricao: "Descrição",
     options: {
-      "Tamanho": ["38", "39", "40", "41", "42", "43"],
-      "Cor": ["B8C3D5"],
-      "NomeCor": ["Estoque"],
-      "Img": [SMule2],
+      "Tamanho": ["P", "M", "G", "GG"],
+      "Cor": ["700A32", "161417", "CFD3DE"],
+      "NomeCor": ["Vinho", "Preto", "Branco"],
+      "Img": [CL1, CL2, CL3],
     },
-    valor: 0,
+    offsetX: "left",
+    offsetY: "1px",
+    valor: 110.00,
   },
   {
     id: 11,
