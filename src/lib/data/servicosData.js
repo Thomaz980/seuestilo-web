@@ -172,7 +172,7 @@ export const servicos = [
     image: PQ01,
     text: "Polo Piquet V",
     type: "Camisas",
-    descricao: "com tecido leve e toque texturizado, garantindo conforto e estilo. Caimento perfeito para um look casual elegante. Ideal para todas as ocasiões.",
+    descricao: "Com tecido leve e toque texturizado, garantindo conforto e estilo. Caimento perfeito para um look casual elegante. Ideal para todas as ocasiões.",
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["EEB798", "F2EADF", "4E4E5A", "262432", "3C436F" ],
@@ -233,7 +233,7 @@ export const servicos = [
     image: LS2,
     text: "Longa Select",
     type: "Camisas",
-    descricao: "Descrição",
+    descricao: "Modelagem moderna que oferece conforto e estilo em qualquer ocasião. Design minimalista para um visual sofisticado e versátil.",
     options: {
       "Tamanho": ["P", "M", "G", "GG", "G1", "G2", "G3"],
       "Cor": ["588EB4", "C7D4FE", "2D2B38", "634249", "194C50"],
@@ -249,7 +249,7 @@ export const servicos = [
     image: GPV1,
     text: "Gola Padre Viscolinho",
     type: "Camisas",
-    descricao: "Descrição",
+    descricao: "Modelagem confortável que valoriza o estilo moderno e minimalista. Gola padre que traz sofisticação e autenticidade ao visual.",
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["AFDDD0", "F1F1F1", "69765C", "28246F", "AC98A4" ,"E3D9D7", "DC8B66", "2651D1", "25263A"],
@@ -265,7 +265,7 @@ export const servicos = [
     image: CL2,
     text: "Curta Linho",
     type: "Camisas",
-    descricao: "Descrição",
+    descricao: "Leve e respirável para máxima frescor. Textura natural com caimento solto, ideal para dias quentes. Design sofisticado que une conforto e elegância.",
     options: {
       "Tamanho": ["P", "M", "G", "GG"],
       "Cor": ["700A32", "161417", "CFD3DE"],
@@ -281,7 +281,7 @@ export const servicos = [
     image: TRACTORBLACK,
     text: "Tractor Black",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Com solado tratorado robusto e design moderno. Conforto e durabilidade para enfrentar qualquer desafio. Acabamento em preto elegante que valoriza o estilo urbano.",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"], 
       "Cor": ["4C5872"],
@@ -292,10 +292,10 @@ export const servicos = [
   },
   { 
     id: 12,
-    image: LOAFERBLACK,
+    image: LOAFERHAVANA,
     text: "Calçados Loafer",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Conforto garantido pela palmilha macia e solado flexível. Versáteis para looks formais ou casuais. Elegância e praticidade para o seu dia a dia.",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"],
       "Cor": ["2D3035", "804B3B", "5F3936"],
@@ -309,12 +309,12 @@ export const servicos = [
     image: SNEAKEBLACK,
     text: "Calçados Sneake",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Com design urbano e solado leve que garante conforto o dia todo. Acabamento de qualidade e ajuste perfeito aos pés.",
     options: {
       "Tamanho":  ["37", "38", "39", "40", "41", "42", "43", "44"],
       "Cor": ["333B46", "4B2920", "0C0F16", "293742", "7F7F80"],
       "NomeCor": ["Black", "Conhaque", "Horus Marinho", "Branco", "Horus Cinza"],
-      "Img": [SNEAKEBLACK, SNEAKE_CONHAQUE, SNEAKE_HORUS_MARINHO, SNEAKE_BRANCO, SNEAKER_HORUS_CINZA],
+      "Img": [SNEAKEBLACK, SNEAKE_CONHAQUE],
     },
     valor: 390.00,
   },
@@ -323,7 +323,7 @@ export const servicos = [
     image: CINTO_DUPLA_FACE,
     text: "Cinto Dupla Face",
     type: "Acessórios",
-    descricao: "Descrição",
+    descricao: "Dois estilos em uma peça para combinar com diferentes looks. Acabamento refinado e ajuste perfeito para máximo conforto.",
     options: {
       "Tamanho": ["Estoque"],
       "Cor": ["AD753A", "594E38"],
@@ -337,7 +337,7 @@ export const servicos = [
     image: TRATORADO_HAVANA,
     text: "Linha Tratorado",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Com solado aderente e design robusto para alta resistência. Conforto e segurança para o dia a dia, ideal para quem precisa de estilo e durabilidade. Perfeitos para looks urbanos e ambientes mais exigentes.",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"],
       "Cor": ["6F4036", "1F1F1F"],
@@ -351,7 +351,7 @@ export const servicos = [
     image: TRACTOR_CONHAQUE,
     text: "Linha Tractor",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Com solado robusto e design resistente para máxima durabilidade. Conforto reforçado para uso prolongado, ideal para quem busca segurança e estilo.",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"],
       "Cor": ["362224", "784D47"],
@@ -365,7 +365,7 @@ export const servicos = [
     image: SNEAKE_CAMURÇA,
     text: "Sneake Camurça",
     type: "Calçados",
-    descricao: "Descrição",
+    descricao: "Conforto garantido com palmilha anatômica e solado leve. Estilo versátil para looks casuais ou mais elegantes. Perfeito para quem valoriza elegância com praticidade.",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"],
       "Cor": ["64341E"],
@@ -379,7 +379,7 @@ export const servicos = [
     image: BERMUDA_MID_SARJA,
     text: "Bermudas Mid Sarja",
     type: "Bermudas",
-    descricao: "Descrição",
+    descricao: "Corte moderno e tecido resistente de toque macio. Modelagem confortável que se adapta ao corpo com leveza. Perfeita para o dia a dia ou momentos de lazer.",
     options: {
       "Tamanho": ["38", "40", "42", "44", "46", "48"], 
       "Cor": ["674C2F", "37302A", "E9E1BD"],
@@ -387,6 +387,20 @@ export const servicos = [
       "Img": [BERMUDA_MID_SARJA, BERMUDA_MID_SARJA, BERMUDA_MID_SARJA],
     },
     valor: 130.00,
+  },
+  {
+    id: 19,
+    image: SNEAKE_HORUS_MARINHO,
+    text: "Calçados Sneake Horus",
+    type: "Calçados",
+    descricao: "Com design urbano e solado leve que garante conforto o dia todo. Acabamento de qualidade e ajuste perfeito aos pés.",
+    options: {
+      "Tamanho":  ["37", "38", "39", "40", "41", "42", "43", "44"],
+      "Cor": ["333B46", "4B2920", "0C0F16", "293742", "7F7F80"],
+      "NomeCor": ["Black", "Conhaque", "Horus Marinho", "Branco", "Horus Cinza"],
+      "Img": [SNEAKE_HORUS_MARINHO, SNEAKE_BRANCO, SNEAKER_HORUS_CINZA],
+    },
+    valor: 390.00,
   },
 ];
 
