@@ -279,13 +279,13 @@ export const servicos = [
   { 
     id: 11,
     image: TRACTORBLACK,
-    text: "Tractor Blanck",
+    text: "Tractor Black",
     type: "Calçados",
     descricao: "Descrição",
     options: {
       "Tamanho": ["37", "38", "39", "40", "41", "42", "43", "44"], 
-      "Cor": ["F4F7FE"],
-      "NomeCor": ["Estoque"],
+      "Cor": ["4C5872"],
+      "NomeCor": ["Black"],
       "Img": [TRACTORBLACK],
     },
     valor: 380.00,
