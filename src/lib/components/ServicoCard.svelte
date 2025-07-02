@@ -111,14 +111,18 @@
 {/if}
 
 {#if showPopup === undefined}
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<div class="relative max-w-40 h-60 overflow-hidden rounded-lg cursor-pointer" on:click={openPopup}>
-    <img src={servico.image} alt="Imagem de Serviço" style={`object-position: ${getObjectPosition(servico)};`}/>
-    <div class="absolute bottom-0 left-0 right-0 h-16 w-full overflow-hidden bg-fixed" style="background-color: hsla(0, 0%, 0%, 0.4)">
-        <div class="flex h-full items-center justify-center text-sm text-center">
-            <p class="text-white opacity-100">{servico.text}</p>
-        </div>
+<div class="servico-card-preview" on:click={openPopup} tabindex="0" role="button" aria-label={`Visualizar detalhes de ${servico.text}`}
+    style="width: 10rem; min-width: 10rem; max-width: 10rem;">
+    <div class="servico-card-img-wrapper" style="width: 100%; height: 100%;">
+        <img 
+            src={servico.image} 
+            alt="Imagem de Serviço" 
+            style={`width: 100%; height: 100%; object-fit: cover; object-position: ${getObjectPosition(servico)}; display: block;`} 
+            draggable="false"
+        />
+    </div>
+    <div class="servico-card-title-bar">
+        <p class="servico-card-title">{servico.text}</p>
     </div>
 </div>
 {/if}
@@ -142,6 +146,59 @@
         top: 0;
         transform: translate(-50%, 0);
         margin-top: 2rem;
+    }
+    .servico-card-preview {
+        position: relative;
+        width: 10rem;
+        height: 15rem;
+        max-width: 10rem;
+        min-width: 10rem;
+        max-height: 15rem;
+        min-height: 15rem;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+    }
+    .servico-card-img-wrapper {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        overflow: hidden;
+    }
+    .servico-card-img-wrapper img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        max-width: unset;
+        max-height: unset;
+    }
+    .servico-card-title-bar {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 3.5rem;
+        background: linear-gradient(0deg, rgba(0,0,0,0.5) 80%, transparent 100%);
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 0.5rem;
+    }
+    .servico-card-title {
+        color: #fff;
+        font-size: 1rem;
+        text-align: center;
+        text-shadow: 0 1px 4px rgba(0,0,0,0.25);
+        margin: 0;
     }
     .relative {
         position: relative;

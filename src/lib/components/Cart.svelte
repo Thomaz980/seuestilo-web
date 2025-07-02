@@ -97,10 +97,31 @@
 
     function valorPorTamanho(item) {
         const t = Number(item.tamanho);
+        const tStr = String(item.tamanho).toUpperCase();
+        if (item.precosPorTamanho && item.tamanho in item.precosPorTamanho) {
+            return item.precosPorTamanho[item.tamanho];
+        }
+
+        if (item.id === 6) {
+            if (t >= 38 && t <= 46) return 160;
+            if (t >= 48 && t <= 54) return 180;
+        }
+       
+        if (item.id === 7) {
+            if (["P", "M", "G", "GG"].includes(tStr)) return 110;
+            if (["G1", "G2", "G3"].includes(tStr)) return 130;
+        }
+
+        if (item.id === 8) {
+            if (["P", "M", "G", "GG"].includes(tStr)) return 130;
+            if (["G1", "G2", "G3"].includes(tStr)) return 150;
+        }
+        
         if (!isNaN(t)) {
             if (t >= 38 && t <= 46) return 160;
             if (t >= 48 && t <= 54) return 180;
         }
+        
         return item.valor || 0;
     }
 

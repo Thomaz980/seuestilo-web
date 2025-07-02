@@ -42,40 +42,25 @@
         <button class={selectedType === 'Calçados' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Calçados')}>Calçados</button>
         <button class={selectedType === 'Calças' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Calças')}>Calças</button>
         <button class={selectedType === 'Camisas' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Camisas')}>Camisas</button>
-        <button class={selectedType === 'Cuecas' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Cuecas')}>Cuecas</button>
+        <button class={selectedType === 'Acessórios' ? 'text-slate-700 underline underline-offset-8' : ''} on:click={() => filterServicos('Acessórios')}>Acessórios</button>
     </nav>
-    <div class="w-full flex flex-wrap items-center justify-center gap-4">
-        {#if mostrarListaExpandida}
-            {#if mostrarPopupDireto && servicoSelecionado}
-                <ServicoCard servico={servicoSelecionado} bind:showPopup={mostrarPopupDireto} />
-                <div class="fixed inset-0 z-40" on:click={fecharPopupDireto}></div>
-            {:else}
-                <div class="w-full flex flex-col gap-2 items-center">
-                    <div class="w-full flex justify-end mb-2">
-                        <button class="px-3 py-1 text-sm bg-gray-200 rounded" on:click={fecharListaExpandida}>Fechar</button>
-                    </div>
-                    <ul class="w-full max-w-2xl flex flex-col gap-2 max-h-[28rem] overflow-y-auto">
-                        {#each servicos.filter(s => selectedType === 'Tudo' || selectedType === s.type) as s, i (s.id)}
-                            <li class="flex items-center gap-4 p-2 border rounded cursor-pointer hover:bg-gray-50 transition" on:click={() => selecionarServico(s)} tabindex="0">
-                                <img src={s.image} alt={s.text} class="w-16 h-16 object-cover rounded" style={`object-position: ${s.objectPosition || 'center'};`} />
-                                <div class="flex-1">
-                                    <div class="font-semibold">{s.text}</div>
-                                    <div class="text-sm text-gray-600">{Number(s.valor).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</div>
-                                </div>
-                            </li>
-                        {/each}
-                    </ul>
+    <div class="w-full flex flex-wrap items-center justify-center gap-4 max-h-[47rem] overflow-y-auto">
+        {#if selectedType === 'Tudo'}
+            {#each servicos.slice(0, 6) as servico (servico.id)}
+                <div in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
+                    <ServicoCard {servico} />
                 </div>
-            {/if}
+            {/each}
         {:else}
-            {#each servicos.filter((servico, index) => selectedType !== 'Tudo' || index < 6) as servico (servico.id)}
-                {#if selectedType === 'Tudo' || selectedType === servico.type}
-                    <div in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
-                        <ServicoCard {servico} />
-                    </div>
-                {/if}
+            {#each servicos.filter(servico => servico.type === selectedType) as servico (servico.id)}
+                <div in:fade={{ duration: 300 }} out:fade={{ duration: 300 }}>
+                    <ServicoCard {servico} />
+                </div>
             {/each}
         {/if}
     </div>
-    <a href="#produtos" class="flex items-center" on:click|preventDefault={abrirListaExpandida}>Explore mais <IconArrowRight/></a>
+    <a href="#produtos" class="flex items-center" on:click|preventDefault={() => {
+        const container = document.querySelector('#servicos .flex.flex-wrap');
+        if (container) container.scrollTop = 0;
+    }}>Explore mais <IconArrowRight/></a>
 </div>
