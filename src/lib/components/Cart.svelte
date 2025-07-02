@@ -18,19 +18,29 @@
     }
 
     function handleTamanhoChange(item, event) {
-        removeFromCart(item.id, item.tamanho);
-        cart.update(items => [
-            ...items,
-            { ...item, tamanho: event.target.value }
-        ]);
+        const novoTamanho = event.target.value;
+        cart.update(items => {
+            const idx = items.findIndex(i => i.id === item.id && i.tamanho === item.tamanho && i.cor === item.cor);
+            if (idx !== -1) {
+                const updated = [...items];
+                updated[idx] = { ...item, tamanho: novoTamanho };
+                return updated;
+            }
+            return items;
+        });
     }
 
     function handleCorChange(item, event) {
-        removeFromCart(item.id, item.tamanho);
-        cart.update(items => [
-            ...items,
-            { ...item, cor: event.target.value }
-        ]);
+        const novaCor = event.target.value;
+        cart.update(items => {
+            const idx = items.findIndex(i => i.id === item.id && i.tamanho === item.tamanho && i.cor === item.cor);
+            if (idx !== -1) {
+                const updated = [...items];
+                updated[idx] = { ...item, cor: novaCor };
+                return updated;
+            }
+            return items;
+        });
     }
 
     function abrirPopupNumero() {
