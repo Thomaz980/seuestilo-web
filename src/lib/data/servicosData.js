@@ -312,7 +312,7 @@ export const servicos = [
     descricao: "Com design urbano e solado leve que garante conforto o dia todo. Acabamento de qualidade e ajuste perfeito aos pés.",
     options: {
       "Tamanho":  ["37", "38", "39", "40", "41", "42", "43", "44"],
-      "Cor": ["333B46", "4B2920", "0C0F16", "293742", "7F7F80"],
+      "Cor": ["333B46", "4B2920"],
       "NomeCor": ["Black", "Conhaque", "Horus Marinho", "Branco", "Horus Cinza"],
       "Img": [SNEAKEBLACK, SNEAKE_CONHAQUE],
     },
@@ -396,7 +396,7 @@ export const servicos = [
     descricao: "Com design urbano e solado leve que garante conforto o dia todo. Acabamento de qualidade e ajuste perfeito aos pés.",
     options: {
       "Tamanho":  ["37", "38", "39", "40", "41", "42", "43", "44"],
-      "Cor": ["333B46", "4B2920", "0C0F16", "293742", "7F7F80"],
+      "Cor": ["0C0F16", "293742", "7F7F80"],
       "NomeCor": ["Black", "Conhaque", "Horus Marinho", "Branco", "Horus Cinza"],
       "Img": [SNEAKE_HORUS_MARINHO, SNEAKE_BRANCO, SNEAKER_HORUS_CINZA],
     },
