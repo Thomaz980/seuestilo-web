@@ -125,8 +125,12 @@
     tabindex="0"
     role="button"
     aria-label="Abrir carrinho (fixo)"
+    style="position: fixed; top: 1.5rem; right: 1.5rem;"
 >
     <img src={cartIcon} alt="Carrinho" class="cart-float-img" />
+    {#if cart.length > 0}
+        <span class="cart-badge">{cart.reduce((acc, item) => acc + (item.quantidade || 1), 0)}</span>
+    {/if}
 </div>
 
 <MenuHamburguer bind:open />
@@ -217,6 +221,26 @@
     .cart-fixed-top-right:focus, .cart-fixed-top-right:hover {
         box-shadow: 0 4px 16px 0 rgba(104,178,97,0.18);
         outline: none;
+    }
+
+    .cart-badge {
+        position: absolute;
+        top: -0.5rem;
+        right: -0.5rem;
+        min-width: 1.3rem;
+        height: 1.3rem;
+        background: #e11d48;
+        color: #fff;
+        font-size: 0.95rem;
+        font-weight: bold;
+        border-radius: 9999px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+        padding: 0 0.3rem;
+        pointer-events: none;
     }
 
     @media (max-width: 600px) {
