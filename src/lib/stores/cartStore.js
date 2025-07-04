@@ -22,15 +22,15 @@ export function addToCart(item) {
     });
 }
 
-export function removeFromCart(id, tamanho) {
-    cart.update(items => items.filter(i => !(i.id === id && i.tamanho === tamanho)));
+export function removeFromCart(id, tamanho, cor) {
+    cart.update(items => items.filter(i => !(i.id === id && i.tamanho === tamanho && i.cor === cor)));
 }
 
-export function changeQuantity(id, tamanho, delta) {
+export function changeQuantity(id, tamanho, cor, delta) {
     cart.update(items => {
         return items.map(i => {
-            if (i.id === id && i.tamanho === tamanho) {
-                return { ...i, quantidade: Math.max(1, i.quantidade + delta) };
+            if (i.id === id && i.tamanho === tamanho && i.cor === cor) {
+                return { ...i, quantidade: Math.max(1, (i.quantidade || 1) + delta) };
             }
             return i;
         });
