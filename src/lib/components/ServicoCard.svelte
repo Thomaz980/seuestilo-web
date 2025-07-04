@@ -44,7 +44,7 @@
             text: servico.text,
             tamanho: selectedTamanho,
             cor: selectedCor,
-            valor: servico.valor,
+            valor: valorAtual,
             options: servico.options || {},
             quantidade: 1
         });
@@ -71,6 +71,29 @@
             return `center ${servico.offset}`;
         return 'center center';
     }
+
+    function valorPorTamanho(item) {
+        const t = Number(item.tamanho);
+        const tStr = String(item.tamanho).toUpperCase();
+        if (item.precosPorTamanho && item.tamanho in item.precosPorTamanho) {
+            return item.precosPorTamanho[item.tamanho];
+        }
+        if (item.id === 6) {
+            if (t >= 38 && t <= 46) return 160;
+            if (t >= 48 && t <= 54) return 180;
+        }
+        if (item.id === 7) {
+            if (["P", "M", "G", "GG"].includes(tStr)) return 110;
+            if (["G1", "G2", "G3"].includes(tStr)) return 130;
+        }
+        if (item.id === 8) {
+            if (["P", "M", "G", "GG"].includes(tStr)) return 130;
+            if (["G1", "G2", "G3"].includes(tStr)) return 150;
+        }
+        return item.valor || 0;
+    }
+
+    $: valorAtual = valorPorTamanho({ ...servico, tamanho: selectedTamanho });
 
     $: console.log("Current cart items:", JSON.stringify($cart, null, 2));
 </script>
@@ -111,7 +134,7 @@
                 {/each}
             </div>
             <div class="flex gap-2 mt-2">
-                <button class="px-4 py-2 bg-[#D1D5DB] text-black rounded" on:click={closePopup}>{formatarValor(servico.valor)}</button>
+                <button class="px-4 py-2 bg-[#D1D5DB] text-black rounded" on:click={closePopup}>{formatarValor(valorAtual)}</button>
                 <button class="px-4 py-2 bg-[#68B261] text-white rounded flex items-center justify-center gap-2" on:click={comprar}>
                      Comprar <img src={cartIcon} alt="carrinho" class="w-5 h-5 ml-1" />
                 </button>
