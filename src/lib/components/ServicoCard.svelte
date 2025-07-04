@@ -94,6 +94,17 @@
             <p class="mb-2">
                 {servico.descricao}
             </p>
+            <!-- Tamanhos disponíveis -->
+            {#if servico.options?.["Tamanho"]?.length}
+            <div class="flex gap-2 my-2 items-center">
+                <span class="text-sm text-gray-700">Tamanho:</span>
+                <select class="border rounded px-2 py-1 text-xs" bind:value={selectedTamanho} aria-label="Selecionar tamanho">
+                    {#each servico.options["Tamanho"] as t}
+                        <option value={t}>{t}</option>
+                    {/each}
+                </select>
+            </div>
+            {/if}
             <div class="flex gap-1 my-1 mt-4 mb-5">
                 {#each servico.options?.["Cor"] ?? [] as c, i}
                     <span class="w-7 h-7 rounded border border-gray-300 inline-block cursor-pointer" style="background-color: #{c};" on:click={() => selectImg(i)} aria-role="button" tabindex="0"></span>

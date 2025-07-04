@@ -95,6 +95,7 @@
             });
             mensagem += `\n-------------------------`;
         });
+        mensagem += `\n*Total da compra:* ${formatarValor(totalCarrinho)}`;
         mensagem += `\n*Forma de pagamento:* ${pagamento}`;
         mensagem += `\n*Forma de entrega:* ${entrega}`;
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
@@ -127,11 +128,6 @@
             if (["G1", "G2", "G3"].includes(tStr)) return 150;
         }
         
-        if (!isNaN(t)) {
-            if (t >= 38 && t <= 46) return 160;
-            if (t >= 48 && t <= 54) return 180;
-        }
-        
         return item.valor || 0;
     }
 
@@ -139,6 +135,10 @@
         const valorNum = valorPorTamanho(item);
         return acc + (valorNum * item.quantidade);
     }, 0);
+
+    function removeItemFromCart(item) {
+        cart.update(items => items.filter(i => !(i.id === item.id && i.tamanho === item.tamanho && i.cor === item.cor)));
+    }
 </script>
 
 <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" transition:fade role="dialog" aria-modal="true" aria-label="Carrinho de compras">
@@ -163,7 +163,7 @@
                                 <div class="flex-1">
                                     <div class="flex items-center justify-between">
                                         <div class="font-semibold">{item.text}</div>
-                                        <button class="text-red-500 ml-2" on:click={() => removeFromCart(item.id, item.tamanho)} title="Remover" aria-label="Remover item do carrinho">
+                                        <button class="text-red-500 ml-2" on:click={() => removeItemFromCart(item)} title="Remover" aria-label="Remover item do carrinho">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6M1 7h22M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2" />
                                             </svg>
@@ -192,15 +192,20 @@
                                     <div class="flex items-center justify-between mt-1">
                                         <div class="text-sm text-gray-700">Valor: {formatarValor(valorPorTamanho(item))}</div>
                                         <div class="text-sm flex items-center gap-2">
-                                            <button class="px-2 py-1 bg-gray-200 rounded" on:click={() => changeQuantity(item.id, item.tamanho, -1)} aria-label="Diminuir quantidade" tabindex="0">-</button>
+                                            <button class="px-2 py-1 bg-gray-200 rounded" on:click={() => changeQuantity(item.id, item.tamanho, item.cor, -1)} aria-label="Diminuir quantidade" tabindex="0">-</button>
                                             <span aria-live="polite">{item.quantidade}</span>
-                                            <button class="px-2 py-1 bg-gray-200 rounded" on:click={() => changeQuantity(item.id, item.tamanho, 1)} aria-label="Aumentar quantidade" tabindex="0">+</button>
+                                            <button class="px-2 py-1 bg-gray-200 rounded" on:click={() => changeQuantity(item.id, item.tamanho, item.cor, 1)} aria-label="Aumentar quantidade" tabindex="0">+</button>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                         {/each}
                     </ul>
+                </div>
+                <!-- Total da compra -->
+                <div class="flex justify-between items-center mt-4 mb-2 px-1">
+                    <span class="font-semibold text-lg text-gray-700">Total:</span>
+                    <span class="font-bold text-xm text-green-700">{formatarValor(totalCarrinho)}</span>
                 </div>
                 {#if !etapaFinalizacao}
                     <div class="flex justify-center mt-4">
@@ -266,5 +271,4 @@
     .pr-2 {
         padding-right: 0.5rem;
     }
-    /* Removido CSS não utilizado e redundante */
 </style>
