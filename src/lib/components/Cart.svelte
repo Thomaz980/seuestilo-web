@@ -57,17 +57,32 @@
         enviarWhatsApp(numeroSelecionado);
     }
 
-    function redirecionarParaWhatsApp(numero, mensagem, ip = '', origem = '') {
+    function redirecionarParaWhatsApp(numero, mensagem, origem = '') {
         const urlWhatsApp = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-        fetch("https://script.google.com/macros/s/AKfycbzYGHbeJ3C_DRgQoQhOEjnTrcACGNf7Mq0Y8YUofQ13upf9hqnJMIS3yOJbiGPdpi_p/exec", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded"
-            },
-            body: `numero=${numero}&ip=${ip}&origem=${origem}`
-        }).finally(() => {
-            window.open(urlWhatsApp, "_blank");
-        });
+        fetch("https://api.ipify.org?format=json")
+            .then(res => res.json())
+            .then(data => {
+                const ip = data.ip;
+                return fetch("https://script.google.com/macros/s/AKfycbzYGHbeJ3C_DRgQoQhOEjnTrcACGNf7Mq0Y8YUofQ13upf9hqnJMIS3yOJbiGPdpi_p/exec", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `numero=${numero}&ip=${ip}&origem=${origem}`
+                });
+            })
+            .catch(() => {
+                return fetch("https://script.google.com/macros/s/AKfycbzYGHbeJ3C_DRgQoQhOEjnTrcACGNf7Mq0Y8YUofQ13upf9hqnJMIS3yOJbiGPdpi_p/exec", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/x-www-form-urlencoded"
+                    },
+                    body: `numero=${numero}&ip=desconhecido&origem=${origem}`
+                });
+            })
+            .finally(() => {
+                window.open(urlWhatsApp, "_blank");
+            });
     }
 
     function enviarWhatsApp(numero) {
@@ -111,7 +126,7 @@
         mensagem += `\n*Total da compra:* ${formatarValor(totalCarrinho)}`;
         mensagem += `\n*Forma de pagamento:* ${pagamento}`;
         mensagem += `\n*Forma de entrega:* ${entrega}`;
-        redirecionarParaWhatsApp(numero, mensagem, '', 'seuestilo-web');
+        redirecionarParaWhatsApp(numero, mensagem, 'seuestilo-web');
     }
 
     function finalizarPedido() {
