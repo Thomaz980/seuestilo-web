@@ -1,12 +1,11 @@
-
 <script>
 
-    import banner from '$img/img/camisa1.jpg';
+    import banner from '$img/img/capa2.jpeg';
     import { scrollToSection } from '$src/utils/scrollToSection.js';
    
 </script>
 <div id="banner" class="w-full flex flex-col items-center">
-    <img src={banner} alt="Banner" class="w-full" />
+    <img src={banner} alt="Banner" class="banner-img" />
 
     <a
         href="#servicos"
@@ -15,5 +14,10 @@
     >
 </div>
 <style scoped>
-    
+.banner-img {
+    width: 100%;
+    height: 38rem;
+    object-fit: cover;
+    object-position: center 78%; /* Mostra mais a parte de baixo da imagem */
+}
 </style>
