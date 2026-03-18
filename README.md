@@ -1,46 +1,34 @@
-# sv
+# 🛒 CentralBio v2 — Social Commerce Solution
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+O **CentralBio v2** é a evolução da plataforma original, transformada em uma solução completa de **catálogo digital e vendas via WhatsApp**. Focada em pequenos empreendedores, a ferramenta permite a navegação por produtos, gestão de estoque e finalização de pedidos de forma intuitiva.
 
-## Creating a project
+---
 
-If you're seeing this, you've probably already done this step. Congrats!
+<div align="center">
+  <img src="https://img.shields.io/badge/Svelte-FF3E00?style=for-the-badge&logo=svelte&logoColor=white" alt="Svelte">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript">
+  <img src="https://img.shields.io/badge/UI/UX-Design-blueviolet?style=for-the-badge" alt="UI/UX">
+  <img src="https://img.shields.io/badge/WhatsApp_API-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp">
+</div>
 
-```bash
-# create a new project in the current directory
-npx sv create
+---
 
-# create a new project in my-app
-npx sv create my-app
-```
+## ✨ O que há de novo na v2?
+Diferente da versão anterior (apenas links), a v2 foca na **experiência de compra**:
 
-## Configuração do Node.js
+- [x] **Catálogo Inteligente:** Itens com descrições detalhadas e suporte a variantes.
+- [x] **Gestão de Carrinho:** Adição, remoção e cálculo de itens em tempo real.
+- [x] **Checkout via WhatsApp:** Envio automático da lista de compras formatada para o vendedor.
+- [x] **Customização de Atributos:** Seleção dinâmica de cores, tamanhos e informações de estoque.
+- [x] **Interface Otimizada:** UX aprimorada para dispositivos móveis, visando a conversão.
 
-Este projeto requer o Node.js versão 18. Para garantir que você está usando a versão correta, siga as instruções abaixo:
+## 🛠️ Tecnologias e Conceitos
+* **Frontend:** [Svelte](https://svelte.dev/) (Alta performance e reatividade).
+* **Estado Global:** Gerenciamento eficiente de carrinho de compras.
+* **Integração:** Protocolo `wa.me` para automação de mensagens de pedido.
+* **Design:** Mobile-first com foco em acessibilidade e legibilidade.
 
-1. Instale o [nvm](https://github.com/nvm-sh/nvm) (Node Version Manager).
-2. Execute `nvm install` para instalar a versão correta do Node.js.
-3. Execute `nvm use` para usar a versão correta do Node.js.
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+## 🚀 Como testar
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/jamerson-mt/centralbio-v2-web.git](https://github.com/jamerson-mt/centralbio-v2-web.git)
